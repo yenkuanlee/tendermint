@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/libs/protoio"
-	"github.com/tendermint/tendermint/p2p/conn"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/libs/protoio"
+	"github.com/yenkuanlee/tendermint/p2p/conn"
+	tmp2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
 )
 
 var defaultNodeName = "host_peer"

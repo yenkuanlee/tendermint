@@ -8,9 +8,9 @@ import (
 	"math"
 	"time"
 
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	rpchttp "github.com/yenkuanlee/tendermint/rpc/client/http"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // Load generates transactions against the network until the given context is
