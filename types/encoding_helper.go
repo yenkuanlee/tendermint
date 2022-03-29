@@ -1,7 +1,7 @@
 package types
 
 import (
-	cmn "github.com/tendermint/tendermint/libs/common"
+	cmn "github.com/yenkuanlee/tendermint/libs/common"
 )
 
 // cdcEncode returns nil if the input is nil, otherwise returns

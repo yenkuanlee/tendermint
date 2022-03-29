@@ -17,34 +17,34 @@ import (
 	"github.com/rs/cors"
 
 	amino "github.com/tendermint/go-amino"
-	abci "github.com/tendermint/tendermint/abci/types"
-	bcv0 "github.com/tendermint/tendermint/blockchain/v0"
-	bcv1 "github.com/tendermint/tendermint/blockchain/v1"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/consensus"
-	cs "github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/evidence"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/pex"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpccore "github.com/tendermint/tendermint/rpc/core"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	grpccore "github.com/tendermint/tendermint/rpc/grpc"
-	rpcserver "github.com/tendermint/tendermint/rpc/lib/server"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/state/txindex/kv"
-	"github.com/tendermint/tendermint/state/txindex/null"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	bcv0 "github.com/yenkuanlee/tendermint/blockchain/v0"
+	bcv1 "github.com/yenkuanlee/tendermint/blockchain/v1"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/consensus"
+	cs "github.com/yenkuanlee/tendermint/consensus"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/evidence"
+	cmn "github.com/yenkuanlee/tendermint/libs/common"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmpubsub "github.com/yenkuanlee/tendermint/libs/pubsub"
+	mempl "github.com/yenkuanlee/tendermint/mempool"
+	"github.com/yenkuanlee/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/p2p/pex"
+	"github.com/yenkuanlee/tendermint/privval"
+	"github.com/yenkuanlee/tendermint/proxy"
+	rpccore "github.com/yenkuanlee/tendermint/rpc/core"
+	ctypes "github.com/yenkuanlee/tendermint/rpc/core/types"
+	grpccore "github.com/yenkuanlee/tendermint/rpc/grpc"
+	rpcserver "github.com/yenkuanlee/tendermint/rpc/lib/server"
+	sm "github.com/yenkuanlee/tendermint/state"
+	"github.com/yenkuanlee/tendermint/state/txindex"
+	"github.com/yenkuanlee/tendermint/state/txindex/kv"
+	"github.com/yenkuanlee/tendermint/state/txindex/null"
+	"github.com/yenkuanlee/tendermint/store"
+	"github.com/yenkuanlee/tendermint/types"
+	tmtime "github.com/yenkuanlee/tendermint/types/time"
+	"github.com/yenkuanlee/tendermint/version"
 	dbm "github.com/tendermint/tm-db"
 )
 
@@ -526,7 +526,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 			// blocks assuming 10s blocks ~ 28 hours.
 			// TODO (melekes): make it dynamic based on the actual block latencies
 			// from the live network.
-			// https://github.com/tendermint/tendermint/issues/3523
+			// https://github.com/yenkuanlee/tendermint/issues/3523
 			SeedDisconnectWaitPeriod: 28 * time.Hour,
 		})
 	pexReactor.SetLogger(logger.With("module", "pex"))
@@ -600,7 +600,7 @@ func NewNode(config *cfg.Config,
 
 	pubKey := privValidator.GetPubKey()
 	if pubKey == nil {
-		// TODO: GetPubKey should return errors - https://github.com/tendermint/tendermint/issues/3602
+		// TODO: GetPubKey should return errors - https://github.com/yenkuanlee/tendermint/issues/3602
 		return nil, errors.New("could not retrieve public key from private validator")
 	}
 
@@ -864,7 +864,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/yenkuanlee/tendermint/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

@@ -7,9 +7,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/lite/proxy"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
+	cmn "github.com/yenkuanlee/tendermint/libs/common"
+	"github.com/yenkuanlee/tendermint/lite/proxy"
+	rpcclient "github.com/yenkuanlee/tendermint/rpc/client"
 )
 
 // LiteCmd represents the base command when called without any subcommands

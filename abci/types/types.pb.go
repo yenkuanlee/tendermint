@@ -9,8 +9,8 @@ import fmt "fmt"
 import math "math"
 import _ "github.com/gogo/protobuf/gogoproto"
 import _ "github.com/golang/protobuf/ptypes/timestamp"
-import merkle "github.com/tendermint/tendermint/crypto/merkle"
-import common "github.com/tendermint/tendermint/libs/common"
+import merkle "github.com/yenkuanlee/tendermint/crypto/merkle"
+import common "github.com/yenkuanlee/tendermint/libs/common"
 
 import time "time"
 

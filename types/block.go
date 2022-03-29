@@ -9,11 +9,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/version"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/merkle"
+	"github.com/yenkuanlee/tendermint/crypto/tmhash"
+	cmn "github.com/yenkuanlee/tendermint/libs/common"
+	"github.com/yenkuanlee/tendermint/version"
 )
 
 const (
@@ -462,7 +462,7 @@ func (h *Header) StringIndented(indent string) string {
 // For now, it is identical to a vote,
 // but in the future it will contain fewer fields
 // to eliminate the redundancy in commits.
-// See https://github.com/tendermint/tendermint/issues/1648.
+// See https://github.com/yenkuanlee/tendermint/issues/1648.
 type CommitSig Vote
 
 // String returns the underlying Vote.String()

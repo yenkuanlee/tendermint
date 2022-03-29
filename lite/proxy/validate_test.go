@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tendermint/tendermint/lite/proxy"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/lite/proxy"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var (

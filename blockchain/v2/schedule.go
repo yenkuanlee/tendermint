@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/p2p"
 )
 
 type Event interface{}
