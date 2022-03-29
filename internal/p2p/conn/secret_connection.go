@@ -22,12 +22,12 @@ import (
 	"golang.org/x/crypto/hkdf"
 	"golang.org/x/crypto/nacl/box"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/internal/libs/async"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/crypto/encoding"
+	"github.com/yenkuanlee/tendermint/internal/libs/async"
+	"github.com/yenkuanlee/tendermint/internal/libs/protoio"
+	tmp2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
 )
 
 // 4 + 1024 == 1028 total frame size
@@ -53,13 +53,13 @@ var (
 
 // SecretConnection implements net.Conn.
 // It is an implementation of the STS protocol.
-// See https://github.com/tendermint/tendermint/blob/0.1/docs/sts-final.pdf for
+// See https://github.com/yenkuanlee/tendermint/blob/0.1/docs/sts-final.pdf for
 // details on the protocol.
 //
 // Consumers of the SecretConnection are responsible for authenticating
 // the remote peer's pubkey against known information, like a nodeID.
 // Otherwise they are vulnerable to MITM.
-// (TODO(ismail): see also https://github.com/tendermint/tendermint/issues/3010)
+// (TODO(ismail): see also https://github.com/yenkuanlee/tendermint/issues/3010)
 type SecretConnection struct {
 
 	// immutable
@@ -456,7 +456,7 @@ func incrNonce(nonce *[aeadNonceSize]byte) {
 	counter := binary.LittleEndian.Uint64(nonce[4:])
 	if counter == math.MaxUint64 {
 		// Terminates the session and makes sure the nonce would not re-used.
-		// See https://github.com/tendermint/tendermint/issues/3531
+		// See https://github.com/yenkuanlee/tendermint/issues/3531
 		panic("can't increase nonce without overflow")
 	}
 	counter++

@@ -15,8 +15,8 @@
 >
 >     Accepted
 >
->     [Tracking issue](https://github.com/tendermint/tendermint/issues/123)
->     [Milestone](https://github.com/tendermint/tendermint/milestones/123)
+>     [Tracking issue](https://github.com/yenkuanlee/tendermint/issues/123)
+>     [Milestone](https://github.com/yenkuanlee/tendermint/milestones/123)
 >     [Project board](https://github.com/orgs/tendermint/projects/123)
 >
 > Rejected ADRs are captured as a record of recommendations that we specifically

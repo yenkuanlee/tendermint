@@ -4,8 +4,8 @@ package http
 // from the client to the server.
 
 import (
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/rpc/coretypes"
+	"github.com/yenkuanlee/tendermint/libs/bytes"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
 )
 
 type abciQueryArgs struct {

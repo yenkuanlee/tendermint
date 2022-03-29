@@ -91,4 +91,4 @@ Proposed
 ## References
 
 - [SemVer](https://semver.org/)
-- [Tendermint Tracking Issue](https://github.com/tendermint/tendermint/issues/5680)
+- [Tendermint Tracking Issue](https://github.com/yenkuanlee/tendermint/issues/5680)

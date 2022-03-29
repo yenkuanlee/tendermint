@@ -15,8 +15,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/consensus"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 func main() {

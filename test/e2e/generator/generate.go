@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var (

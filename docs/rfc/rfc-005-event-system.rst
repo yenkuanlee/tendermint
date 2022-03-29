@@ -55,9 +55,9 @@ References
 ~~~~~~~~~~
 
 - Legacy Implementation
-  - `publication of events <https://github.com/tendermint/tendermint/blob/master/libs/pubsub/pubsub.go#L333-L345>`_ 
-  - `send operation <https://github.com/tendermint/tendermint/blob/master/libs/pubsub/pubsub.go#L489-L527>`_ 
-  - `send loop <https://github.com/tendermint/tendermint/blob/master/libs/pubsub/pubsub.go#L381-L402>`_
+  - `publication of events <https://github.com/yenkuanlee/tendermint/blob/master/libs/pubsub/pubsub.go#L333-L345>`_ 
+  - `send operation <https://github.com/yenkuanlee/tendermint/blob/master/libs/pubsub/pubsub.go#L489-L527>`_ 
+  - `send loop <https://github.com/yenkuanlee/tendermint/blob/master/libs/pubsub/pubsub.go#L381-L402>`_
 - Related RFCs 
   - `RFC 002: IPC Ecosystem <./rfc-002-ipc-ecosystem.md>`_ 
   - `RFC 003: Performance Questions <./rfc-003-performance-questions.md>`_ 
@@ -92,7 +92,7 @@ improvements to throughput without requiring large changes.
 Subscription Identification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before `#6386 <https://github.com/tendermint/tendermint/pull/6386>`_, all
+Before `#6386 <https://github.com/yenkuanlee/tendermint/pull/6386>`_, all
 subscriptions were identified by the combination of a client ID and a query,
 and with that change, it became possible to identify all subscription given
 only an ID, but compatibility with the legacy identification means that there's a

@@ -30,7 +30,7 @@ Special thanks to external contributors on this release:
 
   - [p2p] \#7035 Remove legacy P2P routing implementation and associated configuration options. (@tychoish)
   - [p2p] \#7265 Peer manager reduces peer score for each failed dial attempts for peers that have not successfully dialed. (@tychoish)
-  - [p2p] [\#7594](https://github.com/tendermint/tendermint/pull/7594) always advertise self, to enable mutual address discovery. (@altergui)
+  - [p2p] [\#7594](https://github.com/yenkuanlee/tendermint/pull/7594) always advertise self, to enable mutual address discovery. (@altergui)
 
 - Go API
 
@@ -51,9 +51,9 @@ Special thanks to external contributors on this release:
 
 ### FEATURES
 
-- [rpc] [\#7270](https://github.com/tendermint/tendermint/pull/7270) Add `header` and `header_by_hash` RPC Client queries. (@fedekunze)
+- [rpc] [\#7270](https://github.com/yenkuanlee/tendermint/pull/7270) Add `header` and `header_by_hash` RPC Client queries. (@fedekunze)
 - [rpc] [\#7701] Add `ApplicationInfo` to `status` rpc call which contains the application version. (@jonasbostoen)
-- [cli] [#7033](https://github.com/tendermint/tendermint/pull/7033) Add a `rollback` command to rollback to the previous tendermint state in the event of non-determinstic app hash or reverting an upgrade.
+- [cli] [#7033](https://github.com/yenkuanlee/tendermint/pull/7033) Add a `rollback` command to rollback to the previous tendermint state in the event of non-determinstic app hash or reverting an upgrade.
 - [mempool, rpc] \#7041  Add removeTx operation to the RPC layer. (@tychoish)
 - [consensus] \#7354 add a new `synchrony` field to the `ConsensusParameter` struct for controlling the parameters of the proposer-based timestamp algorithm. (@williambanfield)
 - [consensus] \#7376 Update the proposal logic per the Propose-based timestamps specification so that the proposer will wait for the previous block time to occur before proposing the next block. (@williambanfield)
@@ -71,7 +71,7 @@ Special thanks to external contributors on this release:
 - [pubsub] \#7319 Performance improvements for the event query API (@creachadair)
 - [node] \#7521 Define concrete type for seed node implementation (@spacech1mp)
 - [rpc] \#7612 paginate mempool /unconfirmed_txs rpc endpoint (@spacech1mp)
-- [light] [\#7536](https://github.com/tendermint/tendermint/pull/7536) rpc /status call returns info about the light client (@jmalicevic)
+- [light] [\#7536](https://github.com/yenkuanlee/tendermint/pull/7536) rpc /status call returns info about the light client (@jmalicevic)
 - [types] \#7765 Replace EvidenceData with EvidenceList to avoid unnecessary nesting of evidence fields within a block. (@jmalicevic)
 
 ### BUG FIXES
@@ -79,4 +79,4 @@ Special thanks to external contributors on this release:
 - fix: assignment copies lock value in `BitArray.UnmarshalJSON()` (@lklimek)
 - [light] \#7640 Light Client: fix absence proof verification (@ashcherbakov)
 - [light] \#7641 Light Client: fix querying against the latest height (@ashcherbakov)
-- [cli] [#7837](https://github.com/tendermint/tendermint/pull/7837) fix app hash in state rollback. (@yihuang)
+- [cli] [#7837](https://github.com/yenkuanlee/tendermint/pull/7837) fix app hash in state rollback. (@yihuang)

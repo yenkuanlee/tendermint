@@ -12,7 +12,7 @@ Accepted
 
 The advent of state sync and block pruning gave rise to the opportunity for full nodes to participate in consensus without needing complete block history. This also introduced a problem with respect to evidence handling. Nodes that didn't have all the blocks within the evidence age were incapable of validating evidence, thus halting if that evidence was committed on chain.
 
-[ADR 068](https://github.com/tendermint/tendermint/blob/master/docs/architecture/adr-068-reverse-sync.md) was published in response to this problem and modified the spec to add a minimum block history invariant. This predominantly sought to extend state sync so that it was capable of fetching and storing the `Header`, `Commit` and `ValidatorSet` (essentially a `LightBlock`) of the last `n` heights, where `n` was calculated based from the evidence age.
+[ADR 068](https://github.com/yenkuanlee/tendermint/blob/master/docs/architecture/adr-068-reverse-sync.md) was published in response to this problem and modified the spec to add a minimum block history invariant. This predominantly sought to extend state sync so that it was capable of fetching and storing the `Header`, `Commit` and `ValidatorSet` (essentially a `LightBlock`) of the last `n` heights, where `n` was calculated based from the evidence age.
 
 This ADR sets out to describe the design of this state sync extension as well as modifications to the light client provider and the merging of tm store.
 
@@ -48,7 +48,7 @@ func (r *Reactor) backfill(state State) error {}
 - a height: `h >= state.LastBlockHeight - state.ConsensusParams.Evidence.MaxAgeNumBlocks`
 - a time: `t >= state.LastBlockTime - state.ConsensusParams.Evidence.MaxAgeDuration`
 
-Reverse Sync relies on two components: A `Dispatcher` and a `BlockQueue`. The `Dispatcher` is a pattern taken from a similar [PR](https://github.com/tendermint/tendermint/pull/4508). It is wired to the `LightBlockChannel` and allows for concurrent light block requests by shifting through a linked list of peers. This abstraction has the nice quality that it can also be used as an array of light providers for a P2P based light client.
+Reverse Sync relies on two components: A `Dispatcher` and a `BlockQueue`. The `Dispatcher` is a pattern taken from a similar [PR](https://github.com/yenkuanlee/tendermint/pull/4508). It is wired to the `LightBlockChannel` and allows for concurrent light block requests by shifting through a linked list of peers. This abstraction has the nice quality that it can also be used as an array of light providers for a P2P based light client.
 
 The `BlockQueue` is a data structure that allows for multiple workers to fetch light blocks, serializing them for the main thread which picks them off the end of the queue, verifies the hashes and persists them.
 
@@ -74,7 +74,7 @@ A final small note is with pruning. This ADR will introduce changes that will no
 
 This ADR tries to remain within the scope of extending state sync, however the changes made opens the door for several areas to be followed up:
 - Properly integrate p2p messaging in the light client package. This will require adding the evidence channel so the light client is capable of reporting evidence. We may also need to rethink the providers model (i.e. currently providers are only added on start up)
-- Merge and clean up the tendermint stores (state, block and evidence). This ADR adds new methods to both the state and block store for saving headers, commits and validator sets. This doesn't quite fit with the current struct (i.e. only `BlockMeta`s instead of `Header`s are saved). We should explore consolidating this for the sake of atomicity and the opportunity for batching. There are also other areas for changes such as the way we store block parts. See [here](https://github.com/tendermint/tendermint/issues/5383) and [here](https://github.com/tendermint/tendermint/issues/4630) for more context.
+- Merge and clean up the tendermint stores (state, block and evidence). This ADR adds new methods to both the state and block store for saving headers, commits and validator sets. This doesn't quite fit with the current struct (i.e. only `BlockMeta`s instead of `Header`s are saved). We should explore consolidating this for the sake of atomicity and the opportunity for batching. There are also other areas for changes such as the way we store block parts. See [here](https://github.com/yenkuanlee/tendermint/issues/5383) and [here](https://github.com/yenkuanlee/tendermint/issues/4630) for more context.
 - Explore opportunistic reverse sync. Technically we don't need to reverse sync if no evidence is observed. I've tried to design the protocol such that it could be possible to move it across to the evidence package if we see fit. Thus only when evidence is seen where we don't have the necessary data, do we perform a reverse sync. The problem with this is that imagine we are in consensus and some evidence pops up requiring us to first fetch and verify the last 10,000 blocks. There's no way a node could do this (sequentially) and vote before the round finishes. Also as we don't punish invalid evidence, a malicious node could easily spam the chain just to get a bunch of "stateless" nodes to perform a bunch of useless work.
 - Explore full reverse sync. Currently we only fetch light blocks. There might be benefits in the future to fetch and persist entire blocks especially if we give control to the application to do this.
 
@@ -93,5 +93,5 @@ This ADR tries to remain within the scope of extending state sync, however the c
 
 ## References
 
-- [Reverse Sync RFC](https://github.com/tendermint/tendermint/blob/master/docs/architecture/adr-068-reverse-sync.md)
-- [Original Issue](https://github.com/tendermint/tendermint/issues/5617)
+- [Reverse Sync RFC](https://github.com/yenkuanlee/tendermint/blob/master/docs/architecture/adr-068-reverse-sync.md)
+- [Original Issue](https://github.com/yenkuanlee/tendermint/issues/5617)

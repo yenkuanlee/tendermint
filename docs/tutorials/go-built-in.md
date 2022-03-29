@@ -82,7 +82,7 @@ Hello, Tendermint Core
 
 Tendermint Core communicates with the application through the Application
 BlockChain Interface (ABCI). All message types are defined in the [protobuf
-file](https://github.com/tendermint/tendermint/blob/master/proto/tendermint/abci/types.proto).
+file](https://github.com/yenkuanlee/tendermint/blob/master/proto/tendermint/abci/types.proto).
 This allows Tendermint Core to run applications written in any programming
 language.
 
@@ -92,7 +92,7 @@ Create a file called `app.go` with the following content:
 package main
 
 import (
- abcitypes "github.com/tendermint/tendermint/abci/types"
+ abcitypes "github.com/yenkuanlee/tendermint/abci/types"
 )
 
 type KVStoreApplication struct {}
@@ -212,7 +212,7 @@ etc.) by Tendermint Core.
 
 Valid transactions will eventually be committed given they are not too big and
 have enough gas. To learn more about gas, check out ["the
-specification"](https://github.com/tendermint/tendermint/blob/master/spec/abci/apps.md#gas).
+specification"](https://github.com/yenkuanlee/tendermint/blob/master/spec/abci/apps.md#gas).
 
 For the underlying key-value store we'll use
 [badger](https://github.com/dgraph-io/badger), which is an embeddable,
@@ -298,7 +298,7 @@ the application's `Query` method.
 
 Applications are free to provide their own APIs. But by using Tendermint Core
 as a proxy, clients (including [light client
-package](https://godoc.org/github.com/tendermint/tendermint/light)) can leverage
+package](https://godoc.org/github.com/yenkuanlee/tendermint/light)) can leverage
 the unified API across different applications. Plus they won't have to call the
 otherwise separate Tendermint Core API for additional proofs.
 
@@ -331,7 +331,7 @@ func (app *KVStoreApplication) Query(reqQuery abcitypes.RequestQuery) (resQuery 
 ```
 
 The complete specification can be found
-[here](https://github.com/tendermint/tendermint/tree/master/spec/abci/).
+[here](https://github.com/yenkuanlee/tendermint/tree/master/spec/abci/).
 
 ## 1.4 Starting an application and a Tendermint Core instance in the same process
 
@@ -351,14 +351,14 @@ import (
  "github.com/dgraph-io/badger"
  "github.com/spf13/viper"
 
- abci "github.com/tendermint/tendermint/abci/types"
- cfg "github.com/tendermint/tendermint/config"
- tmflags "github.com/tendermint/tendermint/libs/cli/flags"
- "github.com/tendermint/tendermint/libs/log"
- nm "github.com/tendermint/tendermint/node"
- "github.com/tendermint/tendermint/internal/p2p"
- "github.com/tendermint/tendermint/privval"
- "github.com/tendermint/tendermint/proxy"
+ abci "github.com/yenkuanlee/tendermint/abci/types"
+ cfg "github.com/yenkuanlee/tendermint/config"
+ tmflags "github.com/yenkuanlee/tendermint/libs/cli/flags"
+ "github.com/yenkuanlee/tendermint/libs/log"
+ nm "github.com/yenkuanlee/tendermint/node"
+ "github.com/yenkuanlee/tendermint/internal/p2p"
+ "github.com/yenkuanlee/tendermint/privval"
+ "github.com/yenkuanlee/tendermint/proxy"
 )
 
 var configFile string
@@ -584,7 +584,7 @@ This should create a `go.mod` file. The current tutorial only works with
 the master branch of Tendermint. so let's make sure we're using the latest version:
 
 ```sh
-go get github.com/tendermint/tendermint@master
+go get github.com/yenkuanlee/tendermint@master
 ```
 
 This will populate the `go.mod` with a release number followed by a hash for Tendermint.
@@ -596,7 +596,7 @@ go 1.15
 
 require (
  github.com/dgraph-io/badger v1.6.2
- github.com/tendermint/tendermint <vX>
+ github.com/yenkuanlee/tendermint <vX>
 )
 ```
 
@@ -680,5 +680,5 @@ $ curl -s 'localhost:26657/abci_query?data="tendermint"'
 
 I hope everything went smoothly and your first, but hopefully not the last,
 Tendermint Core application is up and running. If not, please [open an issue on
-Github](https://github.com/tendermint/tendermint/issues/new/choose). To dig
+Github](https://github.com/yenkuanlee/tendermint/issues/new/choose). To dig
 deeper, read [the docs](https://docs.tendermint.com/master/).

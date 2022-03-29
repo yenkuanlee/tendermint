@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/tendermint/tendermint/libs/log"
-	rs "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	rs "github.com/yenkuanlee/tendermint/rpc/jsonrpc/server"
+	"github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
 )
 
 var rpcFuncMap = map[string]*rs.RPCFunc{

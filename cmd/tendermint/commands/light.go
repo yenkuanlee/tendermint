@@ -14,14 +14,14 @@ import (
 	"github.com/spf13/cobra"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	"github.com/yenkuanlee/tendermint/light"
+	lproxy "github.com/yenkuanlee/tendermint/light/proxy"
+	lrpc "github.com/yenkuanlee/tendermint/light/rpc"
+	dbs "github.com/yenkuanlee/tendermint/light/store/db"
+	rpcserver "github.com/yenkuanlee/tendermint/rpc/jsonrpc/server"
 )
 
 // LightCmd constructs the base command called when invoked without any subcommands.
@@ -170,7 +170,7 @@ for applications built w/ Cosmos SDK).
 			cfg.MaxOpenConnections = maxOpenConnections
 			// If necessary adjust global WriteTimeout to ensure it's greater than
 			// TimeoutBroadcastTxCommit.
-			// See https://github.com/tendermint/tendermint/issues/3435
+			// See https://github.com/yenkuanlee/tendermint/issues/3435
 			if cfg.WriteTimeout <= conf.RPC.TimeoutBroadcastTxCommit {
 				cfg.WriteTimeout = conf.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 			}

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	"github.com/tendermint/tendermint/types"
+	tmbytes "github.com/yenkuanlee/tendermint/libs/bytes"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // Status returns Tendermint status including node info, pubkey, latest block

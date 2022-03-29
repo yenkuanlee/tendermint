@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/eventlog/cursor"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/coretypes"
+	"github.com/yenkuanlee/tendermint/internal/eventlog/cursor"
+	tmbytes "github.com/yenkuanlee/tendermint/libs/bytes"
+	lrpc "github.com/yenkuanlee/tendermint/light/rpc"
+	rpcclient "github.com/yenkuanlee/tendermint/rpc/client"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
 )
 
 // proxyService wraps a light RPC client to export the RPC service interfaces.

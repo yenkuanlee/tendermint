@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 const (
@@ -356,7 +356,7 @@ func (cli *socketClient) drainQueue(ctx context.Context) {
 	//
 	// TODO(creachadair): We can't simply range the channel, because it is never
 	// closed, and the writer continues to add work.
-	// See https://github.com/tendermint/tendermint/issues/6996.
+	// See https://github.com/yenkuanlee/tendermint/issues/6996.
 	for {
 		select {
 		case <-ctx.Done():

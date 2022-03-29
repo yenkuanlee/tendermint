@@ -664,9 +664,9 @@ The following alternative approaches were considered:
    - [indexer: unbuffered event subscription slow down the consensus][i7247] (#7247)
    - [rpc: remove duplication of events when querying][i7273] (#7273)
 
-[rfc006]:        https://github.com/tendermint/tendermint/blob/master/docs/rfc/rfc-006-event-subscription.md
-[rpc-service]:   https://github.com/tendermint/tendermint/blob/master/rpc/openapi/openapi.yaml
-[query-grammar]: https://pkg.go.dev/github.com/tendermint/tendermint@master/internal/pubsub/query/syntax
+[rfc006]:        https://github.com/yenkuanlee/tendermint/blob/master/docs/rfc/rfc-006-event-subscription.md
+[rpc-service]:   https://github.com/yenkuanlee/tendermint/blob/master/rpc/openapi/openapi.yaml
+[query-grammar]: https://pkg.go.dev/github.com/yenkuanlee/tendermint@master/internal/pubsub/query/syntax
 [ws]:            https://datatracker.ietf.org/doc/html/rfc6455
 [jsonrpc2]:      https://www.jsonrpc.org/specification
 [nginx]:         https://nginx.org/en/docs/
@@ -674,11 +674,11 @@ The following alternative approaches were considered:
 [rp-ws]:         https://nginx.org/en/docs/http/websocket.html
 <!-- markdown-link-check-disable-next-line -->
 [ng-xm]:         https://www.nginx.com/resources/wiki/extending/
-[abci-event]:    https://pkg.go.dev/github.com/tendermint/tendermint/abci/types#Event
-[rfc001]:        https://github.com/tendermint/tendermint/blob/master/docs/rfc/rfc-001-storage-engine.rst
-[rfc002]:        https://github.com/tendermint/tendermint/blob/master/docs/rfc/rfc-002-ipc-ecosystem.md
-[i3380]:         https://github.com/tendermint/tendermint/issues/3380
-[i6439]:         https://github.com/tendermint/tendermint/issues/6439
-[i6729]:         https://github.com/tendermint/tendermint/issues/6729
-[i7247]:         https://github.com/tendermint/tendermint/issues/7247
-[i7273]:         https://github.com/tendermint/tendermint/issues/7273
+[abci-event]:    https://pkg.go.dev/github.com/yenkuanlee/tendermint/abci/types#Event
+[rfc001]:        https://github.com/yenkuanlee/tendermint/blob/master/docs/rfc/rfc-001-storage-engine.rst
+[rfc002]:        https://github.com/yenkuanlee/tendermint/blob/master/docs/rfc/rfc-002-ipc-ecosystem.md
+[i3380]:         https://github.com/yenkuanlee/tendermint/issues/3380
+[i6439]:         https://github.com/yenkuanlee/tendermint/issues/6439
+[i6729]:         https://github.com/yenkuanlee/tendermint/issues/6729
+[i7247]:         https://github.com/yenkuanlee/tendermint/issues/7247
+[i7273]:         https://github.com/yenkuanlee/tendermint/issues/7273

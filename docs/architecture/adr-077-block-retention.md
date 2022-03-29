@@ -16,9 +16,9 @@
 
 Currently, all Tendermint nodes contain the complete sequence of blocks from genesis up to some height (typically the latest chain height). This will no longer be true when the following features are released:
 
-- [Block pruning](https://github.com/tendermint/tendermint/issues/3652): removes historical blocks and associated data (e.g. validator sets) up to some height, keeping only the most recent blocks.
+- [Block pruning](https://github.com/yenkuanlee/tendermint/issues/3652): removes historical blocks and associated data (e.g. validator sets) up to some height, keeping only the most recent blocks.
 
-- [State sync](https://github.com/tendermint/tendermint/issues/828): bootstraps a new node by syncing state machine snapshots at a given height, but not historical blocks and associated data.
+- [State sync](https://github.com/yenkuanlee/tendermint/issues/828): bootstraps a new node by syncing state machine snapshots at a given height, but not historical blocks and associated data.
 
 To maintain the integrity of the chain, the use of these features must be coordinated such that necessary historical blocks will not become unavailable or lost forever. In particular:
 
@@ -102,8 +102,8 @@ Accepted
 
 ## References
 
-- State sync ADR: <https://github.com/tendermint/tendermint/blob/master/docs/architecture/adr-053-state-sync-prototype.md>
+- State sync ADR: <https://github.com/yenkuanlee/tendermint/blob/master/docs/architecture/adr-053-state-sync-prototype.md>
 
-- State sync issue: <https://github.com/tendermint/tendermint/issues/828>
+- State sync issue: <https://github.com/yenkuanlee/tendermint/issues/828>
 
-- Block pruning issue: <https://github.com/tendermint/tendermint/issues/3652>
+- Block pruning issue: <https://github.com/yenkuanlee/tendermint/issues/3652>

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
 )
 
 func TestGenerator(t *testing.T) {

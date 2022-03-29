@@ -3,7 +3,7 @@ package factory
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // ConsensusParams returns a default set of ConsensusParams that are suitable

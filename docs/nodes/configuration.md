@@ -189,7 +189,7 @@ max-subscriptions-per-client = 5
 # How long to wait for a tx to be committed during /broadcast_tx_commit.
 # WARNING: Using a value larger than 10s will result in increasing the
 # global HTTP write timeout, which applies to all connections and endpoints.
-# See https://github.com/tendermint/tendermint/issues/3435
+# See https://github.com/yenkuanlee/tendermint/issues/3435
 timeout-broadcast-tx-commit = "10s"
 
 # Maximum size of request body, in bytes
@@ -238,7 +238,7 @@ external-address = ""
 # We only use these if we can’t connect to peers in the addrbook
 # NOTE: not used by the new PEX reactor. Please use BootstrapPeers instead.
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 seeds = ""
 
 # Comma separated list of peers to be added to the peer store
@@ -254,7 +254,7 @@ upnp = false
 
 # Path to address book
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 addr-book-file = "config/addrbook.json"
 
 # Set true for strict address routability rules
@@ -264,13 +264,13 @@ addr-book-strict = true
 # Maximum number of inbound peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/yenkuanlee/tendermint/issues/5670
 max-num-inbound-peers = 40
 
 # Maximum number of outbound peers to connect to, excluding persistent peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/yenkuanlee/tendermint/issues/5670
 max-num-outbound-peers = 10
 
 # Maximum number of connections (inbound and outbound).
@@ -281,39 +281,39 @@ max-incoming-connection-attempts = 100
 
 # List of node IDs, to which a connection will be (re)established ignoring any existing limits
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 unconditional-peer-ids = ""
 
 # Maximum pause when redialing a persistent peer (if zero, exponential backoff is used)
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 persistent-peers-max-dial-period = "0s"
 
 # Time to wait before flushing messages out on the connection
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 flush-throttle-timeout = "100ms"
 
 # Maximum size of a message packet payload, in bytes
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 max-packet-msg-payload-size = 1400
 
 # Rate at which packets can be sent, in bytes/second
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 send-rate = 5120000
 
 # Rate at which packets can be received, in bytes/second
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 recv-rate = 5120000
 
 # Set true to enable the peer-exchange reactor
 pex = true
 
 # Comma separated list of peer IDs to keep private (will not be gossiped to other peers)
-# Warning: IPs will be exposed at /net_info, for more information https://github.com/tendermint/tendermint/issues/3055
+# Warning: IPs will be exposed at /net_info, for more information https://github.com/yenkuanlee/tendermint/issues/3055
 private-peer-ids = ""
 
 # Toggle to disable guard against peers connecting from the same ip.
@@ -358,7 +358,7 @@ max-tx-bytes = 1048576
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/yenkuanlee/tendermint/issues/5796
 max-batch-bytes = 0
 
 # ttl-duration, if non-zero, defines the maximum amount of time a transaction

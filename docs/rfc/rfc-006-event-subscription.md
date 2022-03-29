@@ -195,10 +195,10 @@ mutually exclusive.
 - [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification)
 
 [rpc-service]: https://docs.tendermint.com/master/rpc/
-[rpc-methods]: https://github.com/tendermint/tendermint/blob/master/internal/rpc/core/routes.go#L12
+[rpc-methods]: https://github.com/yenkuanlee/tendermint/blob/master/internal/rpc/core/routes.go#L12
 [events]: ./rfc-005-event-system.rst
 [rpc-transport]: ./rfc-002-ipc-ecosystem.md#rpc-transport
 [ws]: https://datatracker.ietf.org/doc/html/rfc6455
 [json-response]: https://www.jsonrpc.org/specification#response_object
 [json-notify]: https://www.jsonrpc.org/specification#notification
-[issue2949]: https://github.com/tendermint/tendermint/issues/2949
+[issue2949]: https://github.com/yenkuanlee/tendermint/issues/2949

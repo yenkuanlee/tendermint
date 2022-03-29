@@ -1,8 +1,8 @@
 package state
 
 import (
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // ValidateValidatorUpdates is an alias for validateValidatorUpdates exported

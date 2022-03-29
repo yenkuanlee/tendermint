@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/crypto/tmhash"
+	"github.com/yenkuanlee/tendermint/internal/libs/protoio"
+	tmrand "github.com/yenkuanlee/tendermint/libs/rand"
+	tmtime "github.com/yenkuanlee/tendermint/libs/time"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
 )
 
 func getTestProposal(t testing.TB) *Proposal {

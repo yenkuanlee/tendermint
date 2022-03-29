@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/cmd/tendermint/commands"
-	"github.com/tendermint/tendermint/cmd/tendermint/commands/debug"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/cli"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/node"
+	"github.com/yenkuanlee/tendermint/cmd/tendermint/commands"
+	"github.com/yenkuanlee/tendermint/cmd/tendermint/commands/debug"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/libs/cli"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/node"
 )
 
 func main() {

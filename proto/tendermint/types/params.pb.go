@@ -392,7 +392,7 @@ func (m *HashedParams) GetBlockMaxGas() int64 {
 // SynchronyParams configure the bounds under which a proposed block's timestamp is considered valid.
 // These parameters are part of the proposer-based timestamps algorithm. For more information,
 // see the specification of proposer-based timestamps:
-// https://github.com/tendermint/tendermint/tree/master/spec/consensus/proposer-based-timestamp
+// https://github.com/yenkuanlee/tendermint/tree/master/spec/consensus/proposer-based-timestamp
 type SynchronyParams struct {
 	// message_delay bounds how long a proposal message may take to reach all validators on a newtork
 	// and still be considered valid.

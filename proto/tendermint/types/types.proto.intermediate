@@ -12,7 +12,7 @@ import "tendermint/types/validator.proto";
 // the ongoing work on ABCI++ is completed.
 //
 // This file supports building of the `tendermint.abci` proto package.
-// For more information, see https://github.com/tendermint/tendermint/issues/8066
+// For more information, see https://github.com/yenkuanlee/tendermint/issues/8066
 
 // BlockIdFlag indicates which BlockID the signature is for
 enum BlockIDFlag {

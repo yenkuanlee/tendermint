@@ -14,7 +14,7 @@ In the past, we kept a collection of Request for Comments (RFC) documents in `do
 Prior to the creation of the ADR process, these documents were used to document
 design and implementation decisions about Tendermint Core. The RFC directory
 was removed in favor of ADRs, in commit 3761aa69 (PR
-[\#6345](https://github.com/tendermint/tendermint/pull/6345)).
+[\#6345](https://github.com/yenkuanlee/tendermint/pull/6345)).
 
 For issues where an explicit design decision or implementation change is
 required, an ADR is generally preferable to an open-ended RFC: An ADR is

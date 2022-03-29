@@ -1,6 +1,6 @@
 package factory
 
-import "github.com/tendermint/tendermint/types"
+import "github.com/yenkuanlee/tendermint/types"
 
 func MakeTenTxs(height int64) []types.Tx {
 	txs := make([]types.Tx, 10)

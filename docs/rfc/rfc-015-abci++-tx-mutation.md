@@ -254,8 +254,8 @@ power instead of immediately solving the problem for them.
 
 ### References
 
-[inclusion-proof]: https://github.com/tendermint/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/types/tx.go#L67
-[tx-serach-result]: https://github.com/tendermint/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/rpc/coretypes/responses.go#L267
-[tx-rpc-func]: https://github.com/tendermint/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/internal/rpc/core/tx.go#L21
-[tx-result-index]: https://github.com/tendermint/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/internal/state/indexer/tx/kv/kv.go#L90
-[abci-event-type]: https://github.com/tendermint/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/abci/types/types.pb.go#L3168
+[inclusion-proof]: https://github.com/yenkuanlee/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/types/tx.go#L67
+[tx-serach-result]: https://github.com/yenkuanlee/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/rpc/coretypes/responses.go#L267
+[tx-rpc-func]: https://github.com/yenkuanlee/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/internal/rpc/core/tx.go#L21
+[tx-result-index]: https://github.com/yenkuanlee/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/internal/state/indexer/tx/kv/kv.go#L90
+[abci-event-type]: https://github.com/yenkuanlee/tendermint/blob/0fcfaa4568cb700e27c954389c1fcd0b9e786332/abci/types/types.pb.go#L3168

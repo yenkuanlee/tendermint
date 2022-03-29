@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/tendermint/tendermint/libs/log"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
 )
 
 // Test runs test cases under tests/

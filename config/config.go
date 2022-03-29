@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmos "github.com/yenkuanlee/tendermint/libs/os"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (
@@ -472,7 +472,7 @@ type RPCConfig struct {
 	// How long to wait for a tx to be committed during /broadcast_tx_commit
 	// WARNING: Using a value larger than 10s will result in increasing the
 	// global HTTP write timeout, which applies to all connections and endpoints.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/yenkuanlee/tendermint/issues/3435
 	TimeoutBroadcastTxCommit time.Duration `mapstructure:"timeout-broadcast-tx-commit"`
 
 	// Maximum size of request body, in bytes
@@ -755,7 +755,7 @@ type MempoolConfig struct {
 
 	// Maximum size of a batch of transactions to send to a peer
 	// Including space needed by encoding (one varint per transaction).
-	// XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+	// XXX: Unused due to https://github.com/yenkuanlee/tendermint/issues/5796
 	MaxBatchBytes int `mapstructure:"max-batch-bytes"`
 
 	// TTLDuration, if non-zero, defines the maximum amount of time a transaction
@@ -969,7 +969,7 @@ type ConsensusConfig struct {
 	// TODO: The following fields are all temporary overrides that should exist only
 	// for the duration of the v0.36 release. The below fields should be completely
 	// removed in the v0.37 release of Tendermint.
-	// See: https://github.com/tendermint/tendermint/issues/8188
+	// See: https://github.com/yenkuanlee/tendermint/issues/8188
 
 	// UnsafeProposeTimeoutOverride provides an unsafe override of the Propose
 	// timeout consensus parameter. It configures how long the consensus engine

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	rpctypes "github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
 )
 
 func unmarshalResponseBytes(responseBytes []byte, expectedID string, result interface{}) error {

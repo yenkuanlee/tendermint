@@ -2,7 +2,7 @@
 
 This document explains how Tendermint Peers are identified and how they connect to one another.
 
-For details on peer discovery, see the [peer exchange (PEX) doc](https://github.com/tendermint/tendermint/blob/master/docs/tendermint-core/pex/README.md).
+For details on peer discovery, see the [peer exchange (PEX) doc](https://github.com/yenkuanlee/tendermint/blob/master/docs/tendermint-core/pex/README.md).
 
 ## Peer Identity
 

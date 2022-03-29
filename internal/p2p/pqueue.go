@@ -10,7 +10,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/log"
 )
 
 // pqEnvelope defines a wrapper around an Envelope with priority to be inserted

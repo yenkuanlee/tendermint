@@ -35,7 +35,7 @@ honor of creating the backport branch!
 Note that, after creating the backport branch, you'll also need to update the
 tags on `master` so that `go mod` is able to order the branches correctly. You
 should tag `master` with a "dev" tag that is "greater than" the backport
-branches tags. See [#6072](https://github.com/tendermint/tendermint/pull/6072)
+branches tags. See [#6072](https://github.com/yenkuanlee/tendermint/pull/6072)
 for more context.
 
 In the following example, we'll assume that we're making a backport branch for
@@ -55,7 +55,7 @@ the 0.35.x line.
    In addition, we rewrite Markdown URLs pointing to master to point to the
    backport branch, so that generated documentation will link to the correct
    versions of files elsewhere in the repository. For context on the latter,
-   see https://github.com/tendermint/tendermint/issues/7675.
+   see https://github.com/yenkuanlee/tendermint/issues/7675.
 
    To prepare the PR:
    ```sh
@@ -89,13 +89,13 @@ After doing these steps, go back to `master` and do the following:
 
 3. Add a new section to the Mergify config (`.github/mergify.yml`) to enable the
    backport bot to work on this branch, and add a corresponding `S:backport-to-v0.35.x`
-   [label](https://github.com/tendermint/tendermint/labels) so the bot can be triggered.
+   [label](https://github.com/yenkuanlee/tendermint/labels) so the bot can be triggered.
 
 4. Add a new section to the Dependabot config (`.github/dependabot.yml`) to
    enable automatic update of Go dependencies on this branch. Copy and edit one
    of the existing branch configurations to set the correct `target-branch`.
 
-[e2e]: https://github.com/tendermint/tendermint/blob/master/.github/workflows/e2e-nightly-master.yml
+[e2e]: https://github.com/yenkuanlee/tendermint/blob/master/.github/workflows/e2e-nightly-master.yml
 
 ## Release candidates
 
@@ -115,7 +115,7 @@ Otherwise:
 1. Start from the backport branch (e.g. `v0.35.x`).
 2. Run the integration tests and the e2e nightlies
    (which can be triggered from the Github UI;
-   e.g., https://github.com/tendermint/tendermint/actions/workflows/e2e-nightly-34x.yml).
+   e.g., https://github.com/yenkuanlee/tendermint/actions/workflows/e2e-nightly-34x.yml).
 3. Prepare the changelog:
    - Move the changes included in `CHANGELOG_PENDING.md` into `CHANGELOG.md`. Each RC should have
      it's own changelog section. These will be squashed when the final candidate is released.

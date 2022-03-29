@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/metrics"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	e2e "github.com/tendermint/tendermint/test/e2e/app"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/example/kvstore"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/app"
 )
 
 // ClientFactory returns a client object, which will create a local

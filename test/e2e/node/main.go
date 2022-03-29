@@ -14,24 +14,24 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/privval"
-	grpcprivval "github.com/tendermint/tendermint/privval/grpc"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/test/e2e/app"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/server"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/light"
+	lproxy "github.com/yenkuanlee/tendermint/light/proxy"
+	lrpc "github.com/yenkuanlee/tendermint/light/rpc"
+	dbs "github.com/yenkuanlee/tendermint/light/store/db"
+	"github.com/yenkuanlee/tendermint/node"
+	"github.com/yenkuanlee/tendermint/privval"
+	grpcprivval "github.com/yenkuanlee/tendermint/privval/grpc"
+	privvalproto "github.com/yenkuanlee/tendermint/proto/tendermint/privval"
+	rpcserver "github.com/yenkuanlee/tendermint/rpc/jsonrpc/server"
+	"github.com/yenkuanlee/tendermint/test/e2e/app"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
 )
 
 // main is the binary entrypoint.
@@ -209,7 +209,7 @@ func startLightNode(ctx context.Context, logger log.Logger, cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/yenkuanlee/tendermint/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

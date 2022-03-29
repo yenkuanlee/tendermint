@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/jsontypes"
-	tmquery "github.com/tendermint/tendermint/internal/pubsub/query"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/jsontypes"
+	tmquery "github.com/yenkuanlee/tendermint/internal/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

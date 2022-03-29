@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/pubsub"
-	"github.com/tendermint/tendermint/libs/log"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	"github.com/yenkuanlee/tendermint/internal/pubsub"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	rpcclient "github.com/yenkuanlee/tendermint/rpc/client"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	jsonrpcclient "github.com/yenkuanlee/tendermint/rpc/jsonrpc/client"
 )
 
 // wsEvents is a wrapper around WSClient, which implements SubscriptionClient.

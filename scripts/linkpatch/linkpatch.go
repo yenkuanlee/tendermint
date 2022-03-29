@@ -2,7 +2,7 @@
 // Markdown link tags to target a different branch.
 //
 // This is used to update documentation links for backport branches.
-// See https://github.com/tendermint/tendermint/issues/7675 for context.
+// See https://github.com/yenkuanlee/tendermint/issues/7675 for context.
 package main
 
 import (

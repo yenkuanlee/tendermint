@@ -19,7 +19,7 @@ assignment that relied on the timestamps included in precommit messages.
 
 The functionality of the PBTS algorithm is governed by two parameters within
 Tendermint. These two parameters are [consensus
-parameters](https://github.com/tendermint/tendermint/blob/master/spec/abci/apps.md#L291),
+parameters](https://github.com/yenkuanlee/tendermint/blob/master/spec/abci/apps.md#L291),
 meaning they are configured by the ABCI application and are expected to be the
 same across all nodes on the network.
 
@@ -50,8 +50,8 @@ useful for the protocols and applications built on top of Tendermint.
 
 The following protocols and application features require a reliable source of time:
 
-* Tendermint Light Clients [rely on correspondence between their known time](https://github.com/tendermint/tendermint/blob/master/spec/light-client/verification/README.md#definitions-1) and the block time for block verification.
-* Tendermint Evidence validity is determined [either in terms of heights or in terms of time](https://github.com/tendermint/tendermint/blob/master/spec/consensus/evidence.md#verification).
+* Tendermint Light Clients [rely on correspondence between their known time](https://github.com/yenkuanlee/tendermint/blob/master/spec/light-client/verification/README.md#definitions-1) and the block time for block verification.
+* Tendermint Evidence validity is determined [either in terms of heights or in terms of time](https://github.com/yenkuanlee/tendermint/blob/master/spec/consensus/evidence.md#verification).
 * Unbonding of staked assets in the Cosmos Hub [occurs after a period of 21
  days](https://github.com/cosmos/governance/blob/master/params-change/Staking.md#unbondingtime).
 * IBC packets can use either a [timestamp or a height to timeout packet
@@ -91,5 +91,5 @@ proposed by their peers to be valid either.
 
 ## See Also
 
-* [The PBTS specification](https://github.com/tendermint/tendermint/blob/master/spec/consensus/proposer-based-timestamp/README.md)
+* [The PBTS specification](https://github.com/yenkuanlee/tendermint/blob/master/spec/consensus/proposer-based-timestamp/README.md)
  contains all of the details of the algorithm.

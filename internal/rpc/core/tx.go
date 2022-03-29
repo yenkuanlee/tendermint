@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"sort"
 
-	tmquery "github.com/tendermint/tendermint/internal/pubsub/query"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	"github.com/tendermint/tendermint/types"
+	tmquery "github.com/yenkuanlee/tendermint/internal/pubsub/query"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/libs/bytes"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the
@@ -23,7 +23,7 @@ func (env *Environment) Tx(ctx context.Context, hash bytes.HexBytes, prove bool)
 
 	// N.B. The hash parameter is HexBytes so that the reflective parameter
 	// decoding logic in the HTTP service will correctly translate from JSON.
-	// See https://github.com/tendermint/tendermint/issues/6802 for context.
+	// See https://github.com/yenkuanlee/tendermint/issues/6802 for context.
 
 	if !indexer.KVSinkEnabled(env.EventSinks) {
 		return nil, errors.New("transaction querying is disabled due to no kvEventSink")

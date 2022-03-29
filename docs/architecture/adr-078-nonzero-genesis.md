@@ -79,4 +79,4 @@ Accepted
 
 ## References
 
-- [#2543: Allow genesis file to start from non-zero height w/ prev block header](https://github.com/tendermint/tendermint/issues/2543)
+- [#2543: Allow genesis file to start from non-zero height w/ prev block header](https://github.com/yenkuanlee/tendermint/issues/2543)

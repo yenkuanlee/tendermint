@@ -109,4 +109,4 @@ N/A
 ## References
 
 - https://github.com/tendermint/spec
-- https://github.com/tendermint/tendermint
+- https://github.com/yenkuanlee/tendermint

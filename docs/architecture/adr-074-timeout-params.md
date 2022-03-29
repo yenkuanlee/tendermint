@@ -190,14 +190,14 @@ The specific mechanism for adding these parameters depends on work related to
 ## References
 
 [conseusus-params-proto]: https://github.com/tendermint/spec/blob/a00de7199f5558cdd6245bbbcd1d8405ccfb8129/proto/tendermint/types/params.proto#L11
-[hashed-params]: https://github.com/tendermint/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/types/params.go#L49
-[default-consensus-params]: https://github.com/tendermint/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/types/params.go#L79
-[current-timeout-defaults]: https://github.com/tendermint/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/config/config.go#L955
-[config-toml]: https://github.com/tendermint/tendermint/blob/5cc980698a3402afce76b26693ab54b8f67f038b/config/toml.go#L425-L440
+[hashed-params]: https://github.com/yenkuanlee/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/types/params.go#L49
+[default-consensus-params]: https://github.com/yenkuanlee/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/types/params.go#L79
+[current-timeout-defaults]: https://github.com/yenkuanlee/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/config/config.go#L955
+[config-toml]: https://github.com/yenkuanlee/tendermint/blob/5cc980698a3402afce76b26693ab54b8f67f038b/config/toml.go#L425-L440
 [cosmos-sdk-consensus-params]: https://github.com/cosmos/cosmos-sdk/issues/6197
-[time-param-validation]: https://github.com/tendermint/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/config/config.go#L1038
-[tendermint-issue-5911-comment]: https://github.com/tendermint/tendermint/issues/5911#issuecomment-973560381
+[time-param-validation]: https://github.com/yenkuanlee/tendermint/blob/7cdf560173dee6773b80d1c574a06489d4c394fe/config/config.go#L1038
+[tendermint-issue-5911-comment]: https://github.com/yenkuanlee/tendermint/issues/5911#issuecomment-973560381
 [spec-issue-359]: https://github.com/tendermint/spec/issues/359
 [arxiv-paper]: https://arxiv.org/pdf/1807.04938.pdf
 [soft-upgrades]: https://github.com/tendermint/spec/pull/222
-[rfc-009]: https://github.com/tendermint/tendermint/pull/7524
+[rfc-009]: https://github.com/yenkuanlee/tendermint/pull/7524

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/log"
 )
 
 // ErrListenerWasRemoved is returned by AddEvent if the listener was removed.

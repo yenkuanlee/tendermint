@@ -407,14 +407,14 @@ discussed.
 
 ## References
 
-[abci]: https://github.com/tendermint/tendermint/tree/master/spec/abci
+[abci]: https://github.com/yenkuanlee/tendermint/tree/master/spec/abci
 [rpc-service]: https://docs.tendermint.com/master/rpc/
 [light-client]: https://docs.tendermint.com/master/tendermint-core/light-client.html
-[tm-cli]: https://github.com/tendermint/tendermint/tree/master/cmd/tendermint
+[tm-cli]: https://github.com/yenkuanlee/tendermint/tree/master/cmd/tendermint
 [cosmos-sdk]: https://github.com/cosmos/cosmos-sdk/
-[local-client]: https://github.com/tendermint/tendermint/blob/master/abci/client/local_client.go
-[socket-server]: https://github.com/tendermint/tendermint/blob/master/abci/server/socket_server.go
+[local-client]: https://github.com/yenkuanlee/tendermint/blob/master/abci/client/local_client.go
+[socket-server]: https://github.com/yenkuanlee/tendermint/blob/master/abci/server/socket_server.go
 [sdk-grpc]: https://pkg.go.dev/github.com/cosmos/cosmos-sdk/types/tx#ServiceServer
 [json-rpc]: https://www.jsonrpc.org/specification
-[abci-conn]: https://github.com/tendermint/tendermint/blob/master/spec/abci/apps.md#state
-[adr-57]: https://github.com/tendermint/tendermint/blob/master/docs/architecture/adr-057-RPC.md
+[abci-conn]: https://github.com/yenkuanlee/tendermint/blob/master/spec/abci/apps.md#state
+[adr-57]: https://github.com/yenkuanlee/tendermint/blob/master/docs/architecture/adr-057-RPC.md

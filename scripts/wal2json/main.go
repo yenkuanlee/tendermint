@@ -13,7 +13,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/tendermint/tendermint/internal/consensus"
+	"github.com/yenkuanlee/tendermint/internal/consensus"
 )
 
 func main() {

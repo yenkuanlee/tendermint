@@ -3,8 +3,8 @@ package query_test
 import (
 	"testing"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/pubsub/query"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/pubsub/query"
 )
 
 const testQuery = `tm.events.type='NewBlock' AND abci.account.name='Igor'`

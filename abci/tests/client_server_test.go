@@ -7,10 +7,10 @@ import (
 	"github.com/fortytw2/leaktest"
 	"github.com/stretchr/testify/assert"
 
-	abciclientent "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	abciserver "github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/libs/log"
+	abciclientent "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/example/kvstore"
+	abciserver "github.com/yenkuanlee/tendermint/abci/server"
+	"github.com/yenkuanlee/tendermint/libs/log"
 )
 
 func TestClientServerNoAddrPrefix(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	ssproto "github.com/yenkuanlee/tendermint/proto/tendermint/statesync"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
 )
 
 func TestValidateMsg(t *testing.T) {

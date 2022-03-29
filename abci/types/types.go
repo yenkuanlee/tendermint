@@ -6,7 +6,7 @@ import (
 
 	"github.com/gogo/protobuf/jsonpb"
 
-	types "github.com/tendermint/tendermint/proto/tendermint/types"
+	types "github.com/yenkuanlee/tendermint/proto/tendermint/types"
 )
 
 const (

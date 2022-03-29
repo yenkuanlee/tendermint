@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/tendermint/tendermint/libs/bits"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/libs/bits"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
 )
 
 const (

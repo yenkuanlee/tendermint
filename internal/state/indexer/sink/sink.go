@@ -4,11 +4,11 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/kv"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/null"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/psql"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink/kv"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink/null"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink/psql"
 )
 
 // EventSinksFromConfig constructs a slice of indexer.EventSink using the provided

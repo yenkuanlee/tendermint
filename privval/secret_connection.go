@@ -22,17 +22,17 @@ import (
 	"golang.org/x/crypto/hkdf"
 	"golang.org/x/crypto/nacl/box"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/internal/libs/async"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
-	tmprivval "github.com/tendermint/tendermint/proto/tendermint/privval"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/crypto/encoding"
+	"github.com/yenkuanlee/tendermint/internal/libs/async"
+	"github.com/yenkuanlee/tendermint/internal/libs/protoio"
+	tmprivval "github.com/yenkuanlee/tendermint/proto/tendermint/privval"
 )
 
 // This code has been duplicated from p2p/conn prior to the P2P refactor.
 // It is left here temporarily until we migrate privval to gRPC.
-// https://github.com/tendermint/tendermint/issues/4698
+// https://github.com/yenkuanlee/tendermint/issues/4698
 
 // 4 + 1024 == 1028 total frame size
 const (
@@ -57,13 +57,13 @@ var (
 
 // SecretConnection implements net.Conn.
 // It is an implementation of the STS protocol.
-// See https://github.com/tendermint/tendermint/blob/0.1/docs/sts-final.pdf for
+// See https://github.com/yenkuanlee/tendermint/blob/0.1/docs/sts-final.pdf for
 // details on the protocol.
 //
 // Consumers of the SecretConnection are responsible for authenticating
 // the remote peer's pubkey against known information, like a nodeID.
 // Otherwise they are vulnerable to MITM.
-// (TODO(ismail): see also https://github.com/tendermint/tendermint/issues/3010)
+// (TODO(ismail): see also https://github.com/yenkuanlee/tendermint/issues/3010)
 type SecretConnection struct {
 
 	// immutable
@@ -468,7 +468,7 @@ func incrNonce(nonce *[aeadNonceSize]byte) error {
 	counter := binary.LittleEndian.Uint64(nonce[4:])
 	if counter == math.MaxUint64 {
 		// Terminates the session and makes sure the nonce would not re-used.
-		// See https://github.com/tendermint/tendermint/issues/3531
+		// See https://github.com/yenkuanlee/tendermint/issues/3531
 		return errors.New("can't increase nonce without overflow")
 	}
 	counter++

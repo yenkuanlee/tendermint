@@ -133,7 +133,7 @@ properly.
 ### References
 
 [proto-spec-encoding]: https://developers.google.com/protocol-buffers/docs/encoding
-[spec-issue]: https://github.com/tendermint/tendermint/issues/5005
+[spec-issue]: https://github.com/yenkuanlee/tendermint/issues/5005
 [cosmos-sdk-adr-27]: https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-027-deterministic-protobuf-serialization.md
 [cer-proto-3]: https://github.com/regen-network/canonical-proto3
 [wire-pb]: https://github.com/creachadair/wirepb

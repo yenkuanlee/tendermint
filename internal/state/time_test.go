@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	tmtime "github.com/tendermint/tendermint/libs/time"
+	tmtime "github.com/yenkuanlee/tendermint/libs/time"
 )
 
 func TestWeightedMedian(t *testing.T) {
