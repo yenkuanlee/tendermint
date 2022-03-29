@@ -6,13 +6,13 @@ import (
 	mrand "math/rand"
 	"net"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
+	tmrand "github.com/yenkuanlee/tendermint/libs/rand"
+	"github.com/yenkuanlee/tendermint/types"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
 )
 
 const testCh = 0x01

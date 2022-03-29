@@ -6,8 +6,8 @@ import (
 	"strconv"
 
 	"github.com/gogo/protobuf/proto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/libs/log"
 )
 
 // wrappedEnvelope wraps a p2p Envelope with its precomputed size.

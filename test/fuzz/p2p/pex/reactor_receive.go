@@ -3,14 +3,14 @@ package pex
 import (
 	"net"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/pex"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/types"
+	"github.com/yenkuanlee/tendermint/version"
 )
 
 var (

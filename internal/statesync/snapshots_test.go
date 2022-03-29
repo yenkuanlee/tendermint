@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 func TestSnapshot_Key(t *testing.T) {

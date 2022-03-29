@@ -9,14 +9,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/cmap"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/libs/cmap"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	tmrand "github.com/yenkuanlee/tendermint/libs/rand"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	tmp2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 type Peer = p2p.Peer
@@ -241,7 +241,7 @@ func (r *Reactor) logErrAddrBook(err error) {
 
 // Receive implements Reactor by handling incoming PEX messages.
 // XXX: do not call any methods that can block or incur heavy processing.
-// https://github.com/tendermint/tendermint/issues/2888
+// https://github.com/yenkuanlee/tendermint/issues/2888
 func (r *Reactor) Receive(chID byte, src Peer, msgBytes []byte) {
 	msg, err := decodeMsg(msgBytes)
 	if err != nil {

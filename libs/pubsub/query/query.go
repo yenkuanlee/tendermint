@@ -19,8 +19,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query/syntax"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/pubsub/query/syntax"
 )
 
 // All is a query that matches all events.

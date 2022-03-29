@@ -11,9 +11,9 @@ import (
 	grpc_retry "github.com/grpc-ecosystem/go-grpc-middleware/retry"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
 	grpc "google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"

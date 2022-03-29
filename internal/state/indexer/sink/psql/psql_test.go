@@ -18,9 +18,9 @@ import (
 	"github.com/ory/dockertest/docker"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/types"
 
 	// Register the Postgres database driver.
 	_ "github.com/lib/pq"

@@ -11,9 +11,9 @@ else
 VERSION := $(shell git describe)
 endif
 
-LD_FLAGS = -X github.com/tendermint/tendermint/version.TMVersion=$(VERSION)
+LD_FLAGS = -X github.com/yenkuanlee/tendermint/version.TMVersion=$(VERSION)
 BUILD_FLAGS = -mod=readonly -ldflags "$(LD_FLAGS)"
-HTTPS_GIT := https://github.com/tendermint/tendermint.git
+HTTPS_GIT := https://github.com/yenkuanlee/tendermint.git
 BUILD_IMAGE := ghcr.io/tendermint/docker-build-proto
 BASE_BRANCH := v0.35.x
 DOCKER_PROTO := docker run -v $(shell pwd):/workspace --workdir /workspace $(BUILD_IMAGE)
@@ -164,7 +164,7 @@ go.sum: go.mod
 draw_deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i github.com/tendermint/tendermint/cmd/tendermint -d 3 | dot -Tpng -o dependency-graph.png
+	@goviz -i github.com/yenkuanlee/tendermint/cmd/tendermint -d 3 | dot -Tpng -o dependency-graph.png
 .PHONY: draw_deps
 
 get_deps_bin_size:
@@ -200,7 +200,7 @@ clean_certs:
 
 format:
 	find . -name '*.go' -type f -not -path "*.git*" -not -name '*.pb.go' -not -name '*pb_test.go' | xargs gofmt -w -s
-	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/tendermint/tendermint
+	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/yenkuanlee/tendermint
 .PHONY: format
 
 lint:

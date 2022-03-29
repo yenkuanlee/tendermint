@@ -18,13 +18,13 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/mocks"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/crypto"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/mocks"
+	"github.com/yenkuanlee/tendermint/internal/p2p/p2ptest"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 func echoReactor(channel *p2p.Channel) {

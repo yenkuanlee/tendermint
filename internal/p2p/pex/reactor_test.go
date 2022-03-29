@@ -1,6 +1,6 @@
-// Temporarily disabled pending ttps://github.com/tendermint/tendermint/issues/7626.
+// Temporarily disabled pending ttps://github.com/yenkuanlee/tendermint/issues/7626.
 //go:build issue7626
-//+build issue7626
+// +build issue7626
 
 package pex_test
 
@@ -13,13 +13,13 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/libs/log"
-	p2pproto "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/p2ptest"
+	"github.com/yenkuanlee/tendermint/internal/p2p/pex"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	p2pproto "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (

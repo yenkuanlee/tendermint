@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 type scTestParams struct {

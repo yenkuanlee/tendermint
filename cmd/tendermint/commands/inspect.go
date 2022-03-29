@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/internal/inspect"
+	"github.com/yenkuanlee/tendermint/internal/inspect"
 )
 
 // InspectCmd is the command for starting an inspect server.

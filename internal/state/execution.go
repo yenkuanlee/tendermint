@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/internal/libs/fail"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/proxy"
-	"github.com/tendermint/tendermint/libs/log"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/crypto/encoding"
+	"github.com/yenkuanlee/tendermint/internal/libs/fail"
+	"github.com/yenkuanlee/tendermint/internal/mempool"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmstate "github.com/yenkuanlee/tendermint/proto/tendermint/state"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

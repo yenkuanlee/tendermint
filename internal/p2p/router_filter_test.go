@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/libs/log"
 )
 
 func TestConnectionFiltering(t *testing.T) {

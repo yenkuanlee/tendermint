@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/libs/pubsub/query"
 )
 
 var _ indexer.TxIndexer = (*TxIndex)(nil)

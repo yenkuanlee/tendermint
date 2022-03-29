@@ -12,19 +12,19 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/evidence"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/evidence"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	mempoolv0 "github.com/yenkuanlee/tendermint/internal/mempool/v0"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/store"
+	"github.com/yenkuanlee/tendermint/internal/test/factory"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmcons "github.com/yenkuanlee/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // Byzantine node sends two different prevotes (nil and blockID) to the same
@@ -281,7 +281,7 @@ func TestByzantinePrevoteEquivocation(t *testing.T) {
 // B sees a commit, A doesn't.
 // Heal partition and ensure A sees the commit
 func TestByzantineConflictingProposalsWithPartition(t *testing.T) {
-	// TODO: https://github.com/tendermint/tendermint/issues/6092
+	// TODO: https://github.com/yenkuanlee/tendermint/issues/6092
 	t.SkipNow()
 
 	// n := 4

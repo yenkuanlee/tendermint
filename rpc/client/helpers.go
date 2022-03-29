@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // Waiter is informed of current height, decided whether to quit early

@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/metrics"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/types"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/types"
 )
 
 //go:generate ../../scripts/mockery_generate.sh AppConnConsensus|AppConnMempool|AppConnQuery|AppConnSnapshot

@@ -50,7 +50,7 @@ module.exports = {
             },
             {
               // TODO(creachadair): Figure out how to make this per-branch.
-              // See: https://github.com/tendermint/tendermint/issues/7908
+              // See: https://github.com/yenkuanlee/tendermint/issues/7908
               title: 'RPC',
               path: 'https://docs.tendermint.com/v0.35/rpc/',
               static: true
@@ -143,11 +143,11 @@ module.exports = {
           children: [
             {
               title: 'Contributing to the docs',
-              url: 'https://github.com/tendermint/tendermint'
+              url: 'https://github.com/yenkuanlee/tendermint'
             },
             {
               title: 'Source code on GitHub',
-              url: 'https://github.com/tendermint/tendermint'
+              url: 'https://github.com/yenkuanlee/tendermint'
             },
             {
               title: 'Careers at Tendermint',

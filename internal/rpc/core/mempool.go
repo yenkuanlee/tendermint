@@ -6,12 +6,12 @@ import (
 	"math/rand"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/internal/mempool"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	rpctypes "github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

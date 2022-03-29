@@ -15,14 +15,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	flow "github.com/tendermint/tendermint/internal/libs/flowrate"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/libs/timer"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/libs/service"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	flow "github.com/yenkuanlee/tendermint/internal/libs/flowrate"
+	"github.com/yenkuanlee/tendermint/internal/libs/protoio"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/libs/timer"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	tmp2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
 )
 
 const (
@@ -630,7 +630,7 @@ FOR_LOOP:
 		switch pkt := packet.Sum.(type) {
 		case *tmp2p.Packet_PacketPing:
 			// TODO: prevent abuse, as they cause flush()'s.
-			// https://github.com/tendermint/tendermint/issues/1190
+			// https://github.com/yenkuanlee/tendermint/issues/1190
 			c.Logger.Debug("Receive Ping")
 			select {
 			case c.pong <- struct{}{}:
@@ -764,7 +764,7 @@ type Channel struct {
 	// Exponential moving average.
 	// This field must be accessed atomically.
 	// It is first in the struct to ensure correct alignment.
-	// See https://github.com/tendermint/tendermint/issues/7000.
+	// See https://github.com/yenkuanlee/tendermint/issues/7000.
 	recentlySent int64
 
 	conn          *MConnection

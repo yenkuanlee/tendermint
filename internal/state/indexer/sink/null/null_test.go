@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 func TestNullEventSink(t *testing.T) {

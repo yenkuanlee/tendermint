@@ -11,10 +11,10 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 const (
@@ -519,7 +519,7 @@ func (cli *socketClient) drainQueue() {
 	//
 	// TODO(creachadair): We can't simply range the channel, because it is never
 	// closed, and the writer continues to add work.
-	// See https://github.com/tendermint/tendermint/issues/6996.
+	// See https://github.com/yenkuanlee/tendermint/issues/6996.
 	for {
 		select {
 		case reqres := <-cli.reqQueue:

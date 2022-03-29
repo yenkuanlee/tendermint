@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/internal/mempool"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/example/kvstore"
+	"github.com/yenkuanlee/tendermint/internal/mempool"
 )
 
 func BenchmarkReap(b *testing.B) {

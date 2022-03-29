@@ -10,14 +10,14 @@ main Tendermint project, the following process leads to the best chance of
 landing changes in master.
 
 All work on the code base should be motivated by a [Github
-Issue](https://github.com/tendermint/tendermint/issues).
-[Search](https://github.com/tendermint/tendermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+Issue](https://github.com/yenkuanlee/tendermint/issues).
+[Search](https://github.com/yenkuanlee/tendermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
 is a good place start when looking for places to contribute. If you
 would like to work on an issue which already exists, please indicate so
 by leaving a comment.
 
 All new contributions should start with a [Github
-Issue](https://github.com/tendermint/tendermint/issues/new/choose). The
+Issue](https://github.com/yenkuanlee/tendermint/issues/new/choose). The
 issue helps capture the problem you're trying to solve and allows for
 early feedback. Once the issue is created the process can proceed in different
 directions depending on how well defined the problem and potential
@@ -63,12 +63,12 @@ Please note that Go requires code to live under absolute paths, which complicate
 While my fork lives at `https://github.com/ebuchman/tendermint`,
 the code should never exist at `$GOPATH/src/github.com/ebuchman/tendermint`.
 Instead, we use `git remote` to add the fork as a new remote for the original repo,
-`$GOPATH/src/github.com/tendermint/tendermint`, and do all the work there.
+`$GOPATH/src/github.com/yenkuanlee/tendermint`, and do all the work there.
 
 For instance, to create a fork and work on a branch of it, I would:
 
 - Create the fork on GitHub, using the fork button.
-- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/tendermint/tendermint`)
+- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/yenkuanlee/tendermint`)
 - `git remote rename origin upstream`
 - `git remote add origin git@github.com:ebuchman/basecoin.git`
 
@@ -175,7 +175,7 @@ easy to reference the pull request where a change was introduced.
 
 The latest state of development is on `master`, which must never fail `make test`. _Never_ force push `master`, unless fixing broken git history (which we rarely do anyways).
 
-To begin contributing, create a development branch either on `github.com/tendermint/tendermint`, or your fork (using `git remote add origin`).
+To begin contributing, create a development branch either on `github.com/yenkuanlee/tendermint`, or your fork (using `git remote add origin`).
 
 Make changes, and before submitting a pull request, update the `CHANGELOG_PENDING.md` to record your change. Also, run either `git rebase` or `git merge` on top of the latest `master`. (Since pull requests are squash-merged, either is fine!)
 
@@ -266,7 +266,7 @@ the 0.35.x line.
 3. Go back to master and tag it as the dev branch for the _next_ major release and push it back up:
    `git tag -a v0.36.0-dev; git push v0.36.0-dev`
 4. Create a new workflow to run the e2e nightlies for this backport branch.
-   (See https://github.com/tendermint/tendermint/blob/master/.github/workflows/e2e-nightly-34x.yml
+   (See https://github.com/yenkuanlee/tendermint/blob/master/.github/workflows/e2e-nightly-34x.yml
    for an example.)
 
 #### Release candidates
@@ -287,7 +287,7 @@ Otherwise:
 1. Start from the backport branch (e.g. `v0.35.x`).
 1. Run the integration tests and the e2e nightlies
    (which can be triggered from the Github UI;
-   e.g., https://github.com/tendermint/tendermint/actions/workflows/e2e-nightly-34x.yml).
+   e.g., https://github.com/yenkuanlee/tendermint/actions/workflows/e2e-nightly-34x.yml).
 1. Prepare the changelog:
    - Move the changes included in `CHANGELOG_PENDING.md` into `CHANGELOG.md`.
    - Run `python ./scripts/linkify_changelog.py CHANGELOG.md` to add links for

@@ -8,11 +8,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/tendermint/tendermint/crypto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/crypto"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (

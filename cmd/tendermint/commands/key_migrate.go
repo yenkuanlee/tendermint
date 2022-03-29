@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/scripts/keymigrate"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/scripts/keymigrate"
 )
 
 func MakeKeyMigrateCommand() *cobra.Command {

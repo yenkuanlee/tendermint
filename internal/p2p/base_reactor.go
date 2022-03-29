@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 // Reactor is responsible for handling incoming messages on one or more
@@ -46,7 +46,7 @@ type Reactor interface {
 	// CONTRACT: msgBytes are not nil.
 	//
 	// XXX: do not call any methods that can block or incur heavy processing.
-	// https://github.com/tendermint/tendermint/issues/2888
+	// https://github.com/yenkuanlee/tendermint/issues/2888
 	Receive(chID byte, peer Peer, msgBytes []byte)
 }
 

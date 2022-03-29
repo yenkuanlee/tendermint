@@ -3,10 +3,10 @@ package mock
 import (
 	"net"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 type Peer struct {

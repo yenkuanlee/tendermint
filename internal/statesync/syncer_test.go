@@ -11,15 +11,15 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/proxy"
-	proxymocks "github.com/tendermint/tendermint/internal/proxy/mocks"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/statesync/mocks"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	proxymocks "github.com/yenkuanlee/tendermint/internal/proxy/mocks"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/statesync/mocks"
+	ssproto "github.com/yenkuanlee/tendermint/proto/tendermint/statesync"
+	"github.com/yenkuanlee/tendermint/types"
+	"github.com/yenkuanlee/tendermint/version"
 )
 
 var ctx = context.Background()

@@ -3,9 +3,9 @@ package core
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	rpctypes "github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // BroadcastEvidence broadcasts evidence of the misbehavior.

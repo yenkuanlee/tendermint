@@ -6,16 +6,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/libs/pubsub/query/syntax"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/pubsub"
+	"github.com/yenkuanlee/tendermint/libs/pubsub/query"
+	"github.com/yenkuanlee/tendermint/libs/pubsub/query/syntax"
 )
 
 var _ pubsub.Query = (*query.Query)(nil)
 
 // Example events from the OpenAPI documentation:
-//  https://github.com/tendermint/tendermint/blob/master/rpc/openapi/openapi.yaml
+//  https://github.com/yenkuanlee/tendermint/blob/master/rpc/openapi/openapi.yaml
 //
 // Redactions:
 //

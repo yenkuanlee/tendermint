@@ -5,9 +5,9 @@ import (
 	"os"
 	"syscall"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	tmlog "github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	tmlog "github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 const (

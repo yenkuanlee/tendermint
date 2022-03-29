@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/pex"
 )
 
 var addrBook = pex.NewAddrBook("./testdata/addrbook.json", true)

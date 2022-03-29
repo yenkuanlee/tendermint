@@ -11,31 +11,31 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	bcv0 "github.com/tendermint/tendermint/internal/blocksync/v0"
-	bcv2 "github.com/tendermint/tendermint/internal/blocksync/v2"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/evidence"
-	"github.com/tendermint/tendermint/internal/mempool"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	mempoolv1 "github.com/tendermint/tendermint/internal/mempool/v1"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink"
-	"github.com/tendermint/tendermint/internal/statesync"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	protop2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/crypto"
+	bcv0 "github.com/yenkuanlee/tendermint/internal/blocksync/v0"
+	bcv2 "github.com/yenkuanlee/tendermint/internal/blocksync/v2"
+	"github.com/yenkuanlee/tendermint/internal/consensus"
+	"github.com/yenkuanlee/tendermint/internal/evidence"
+	"github.com/yenkuanlee/tendermint/internal/mempool"
+	mempoolv0 "github.com/yenkuanlee/tendermint/internal/mempool/v0"
+	mempoolv1 "github.com/yenkuanlee/tendermint/internal/mempool/v1"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/pex"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink"
+	"github.com/yenkuanlee/tendermint/internal/statesync"
+	"github.com/yenkuanlee/tendermint/internal/store"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	tmstrings "github.com/yenkuanlee/tendermint/libs/strings"
+	protop2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/types"
+	"github.com/yenkuanlee/tendermint/version"
 
 	_ "net/http/pprof" // nolint: gosec // securely exposed on separate, optional port
 )
@@ -652,7 +652,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, cfg *config.Config,
 		// blocks assuming 10s blocks ~ 28 hours.
 		// TODO (melekes): make it dynamic based on the actual block latencies
 		// from the live network.
-		// https://github.com/tendermint/tendermint/issues/3523
+		// https://github.com/yenkuanlee/tendermint/issues/3523
 		SeedDisconnectWaitPeriod:     28 * time.Hour,
 		PersistentPeersMaxDialPeriod: cfg.P2P.PersistentPeersMaxDialPeriod,
 	}

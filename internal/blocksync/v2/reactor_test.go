@@ -13,23 +13,23 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/blocksync/v2/internal/behavior"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool/mock"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	sf "github.com/tendermint/tendermint/internal/state/test/factory"
-	tmstore "github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/blocksync/v2/internal/behavior"
+	"github.com/yenkuanlee/tendermint/internal/consensus"
+	"github.com/yenkuanlee/tendermint/internal/mempool/mock"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/p2p/conn"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	sf "github.com/yenkuanlee/tendermint/internal/state/test/factory"
+	tmstore "github.com/yenkuanlee/tendermint/internal/store"
+	"github.com/yenkuanlee/tendermint/internal/test/factory"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	bcproto "github.com/yenkuanlee/tendermint/proto/tendermint/blocksync"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 type mockPeer struct {
@@ -185,7 +185,7 @@ func newTestReactor(t *testing.T, p testReactorParams) *BlockchainReactor {
 }
 
 // This test is left here and not deleted to retain the termination cases for
-// future improvement in [#4482](https://github.com/tendermint/tendermint/issues/4482).
+// future improvement in [#4482](https://github.com/yenkuanlee/tendermint/issues/4482).
 // func TestReactorTerminationScenarios(t *testing.T) {
 
 //	config := cfg.ResetTestRoot("blockchain_reactor_v2_test")

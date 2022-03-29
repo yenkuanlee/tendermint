@@ -9,8 +9,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/libs/log"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
 )
 
 const (

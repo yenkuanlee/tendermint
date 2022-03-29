@@ -10,19 +10,19 @@ import (
 	"sort"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/store"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/light"
+	"github.com/yenkuanlee/tendermint/light/provider"
+	ssproto "github.com/yenkuanlee/tendermint/proto/tendermint/statesync"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var (
@@ -35,7 +35,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/yenkuanlee/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		SnapshotChannel: {
 			MsgType: new(ssproto.Message),

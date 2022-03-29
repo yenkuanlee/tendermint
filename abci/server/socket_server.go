@@ -8,11 +8,11 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmlog "github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	tmlog "github.com/yenkuanlee/tendermint/libs/log"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 // var maxNumberConnections = 2

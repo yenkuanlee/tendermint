@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	rpctypes "github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
 )
 
 const (

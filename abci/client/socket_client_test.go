@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/service"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	"github.com/yenkuanlee/tendermint/abci/server"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/service"
 )
 
 var ctx = context.Background()

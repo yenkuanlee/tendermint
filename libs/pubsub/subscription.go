@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/abci/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
 )
 
 var (

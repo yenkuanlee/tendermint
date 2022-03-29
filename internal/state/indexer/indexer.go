@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/libs/pubsub/query"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // TxIndexer interface defines methods to index and search transactions.

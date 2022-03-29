@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strings"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // snapshotKey is a snapshot key used for lookups.

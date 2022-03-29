@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	e2e "github.com/yenkuanlee/tendermint/test/e2e/pkg"
 )
 
 func Start(ctx context.Context, testnet *e2e.Testnet) error {

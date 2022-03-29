@@ -9,13 +9,13 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmcfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/mocks"
-	prototmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	abcitypes "github.com/yenkuanlee/tendermint/abci/types"
+	tmcfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/internal/state/mocks"
+	prototmstate "github.com/yenkuanlee/tendermint/proto/tendermint/state"
+	"github.com/yenkuanlee/tendermint/types"
 
 	_ "github.com/lib/pq" // for the psql sink
 )

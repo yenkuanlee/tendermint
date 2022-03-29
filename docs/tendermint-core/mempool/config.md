@@ -40,7 +40,7 @@ max-tx-bytes = 1048576
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/yenkuanlee/tendermint/issues/5796
 max-batch-bytes = 0
 ```
 
@@ -102,4 +102,4 @@ Max transaction bytes defines the max size a transaction can be for your node. I
 
 Max batch bytes defines the amount of bytes the node will send to a peer. Default is 0.
 
-> Note: Unused due to https://github.com/tendermint/tendermint/issues/5796
+> Note: Unused due to https://github.com/yenkuanlee/tendermint/issues/5796

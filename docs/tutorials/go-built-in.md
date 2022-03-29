@@ -93,7 +93,7 @@ Create a file called `app.go` and add the following contents:
 package main
 
 import (
- abcitypes "github.com/tendermint/tendermint/abci/types"
+ abcitypes "github.com/yenkuanlee/tendermint/abci/types"
 )
 
 type KVStoreApplication struct {}
@@ -193,7 +193,7 @@ Finally, update the `import` stanza at the top to include the `Badger` library:
 ```go
 import(
 	"github.com/dgraph-io/badger/v3"
-	abcitypes "github.com/tendermint/tendermint/abci/types"
+	abcitypes "github.com/yenkuanlee/tendermint/abci/types"
 )
 ```
 
@@ -247,7 +247,7 @@ import(
 	"bytes"
 
 	"github.com/dgraph-io/badger/v3"
-	abcitypes "github.com/tendermint/tendermint/abci/types"
+	abcitypes "github.com/yenkuanlee/tendermint/abci/types"
 )
 ```
 
@@ -333,7 +333,7 @@ import (
 	"log"
 
 	"github.com/dgraph-io/badger/v3"
-	abcitypes "github.com/tendermint/tendermint/abci/types"
+	abcitypes "github.com/yenkuanlee/tendermint/abci/types"
 )
 ```
 
@@ -406,11 +406,11 @@ import (
 
 	"github.com/dgraph-io/badger/v3"
 	"github.com/spf13/viper"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	cfg "github.com/tendermint/tendermint/config"
-	tmlog "github.com/tendermint/tendermint/libs/log"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/yenkuanlee/tendermint/abci/client"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	tmlog "github.com/yenkuanlee/tendermint/libs/log"
+	nm "github.com/yenkuanlee/tendermint/node"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var homeDir string
@@ -570,17 +570,17 @@ Let's install the latest release version of the Tendermint library.
 From inside of the project directory, run:
 
 ```sh
-go get github.com/tendermint/tendermint@v0.35.0
+go get github.com/yenkuanlee/tendermint@v0.35.0
 ```
 
 Next, we'll need to populate the Tendermint Core configuration files.
 This command will create a `tendermint-home` directory in your project and add a basic set of configuration
 files in `tendermint-home/config/`. For more information on what these files contain
-see [the configuration documentation](https://github.com/tendermint/tendermint/blob/v0.35.0/docs/nodes/configuration.md).
+see [the configuration documentation](https://github.com/yenkuanlee/tendermint/blob/v0.35.0/docs/nodes/configuration.md).
 
 From the root of your project, run:
 ```bash
-go run github.com/tendermint/tendermint/cmd/tendermint@v0.35.0 init validator --home ./tendermint-home
+go run github.com/yenkuanlee/tendermint/cmd/tendermint@v0.35.0 init validator --home ./tendermint-home
 ```
 
 Next, build the application: 
@@ -649,5 +649,5 @@ echo cm9ja3M=" | base64 -d
 
 I hope everything went smoothly and your first, but hopefully not the last,
 Tendermint Core application is up and running. If not, please [open an issue on
-Github](https://github.com/tendermint/tendermint/issues/new/choose). To dig
+Github](https://github.com/yenkuanlee/tendermint/issues/new/choose). To dig
 deeper, read [the docs](https://docs.tendermint.com/master/).

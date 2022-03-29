@@ -8,10 +8,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/service"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
+	"github.com/yenkuanlee/tendermint/abci/example/kvstore"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	rpctest "github.com/yenkuanlee/tendermint/rpc/test"
 )
 
 func NodeSuite(t *testing.T) (service.Service, *config.Config) {

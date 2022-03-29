@@ -6,8 +6,8 @@ import (
 
 	"github.com/oasisprotocol/curve25519-voi/primitives/sr25519"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/tmhash"
 )
 
 var _ crypto.PubKey = PubKey{}

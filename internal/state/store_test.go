@@ -9,15 +9,15 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/test/factory"
+	tmrand "github.com/yenkuanlee/tendermint/libs/rand"
+	tmstate "github.com/yenkuanlee/tendermint/proto/tendermint/state"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (

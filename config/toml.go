@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	tmos "github.com/tendermint/tendermint/libs/os"
+	tmos "github.com/yenkuanlee/tendermint/libs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.
@@ -266,7 +266,7 @@ experimental-close-on-slow-client = {{ .RPC.CloseOnSlowClient }}
 # How long to wait for a tx to be committed during /broadcast_tx_commit.
 # WARNING: Using a value larger than 10s will result in increasing the
 # global HTTP write timeout, which applies to all connections and endpoints.
-# See https://github.com/tendermint/tendermint/issues/3435
+# See https://github.com/yenkuanlee/tendermint/issues/3435
 timeout-broadcast-tx-commit = "{{ .RPC.TimeoutBroadcastTxCommit }}"
 
 # Maximum size of request body, in bytes
@@ -318,7 +318,7 @@ external-address = "{{ .P2P.ExternalAddress }}"
 # We only use these if we can’t connect to peers in the addrbook
 # NOTE: not used by the new PEX reactor. Please use BootstrapPeers instead.
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 seeds = "{{ .P2P.Seeds }}"
 
 # Comma separated list of peers to be added to the peer store
@@ -343,13 +343,13 @@ addr-book-strict = {{ .P2P.AddrBookStrict }}
 # Maximum number of inbound peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/yenkuanlee/tendermint/issues/5670
 max-num-inbound-peers = {{ .P2P.MaxNumInboundPeers }}
 
 # Maximum number of outbound peers to connect to, excluding persistent peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/yenkuanlee/tendermint/issues/5670
 max-num-outbound-peers = {{ .P2P.MaxNumOutboundPeers }}
 
 # Maximum number of connections (inbound and outbound).
@@ -360,39 +360,39 @@ max-incoming-connection-attempts = {{ .P2P.MaxIncomingConnectionAttempts }}
 
 # List of node IDs, to which a connection will be (re)established ignoring any existing limits
 # TODO: Remove once p2p refactor is complete.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/yenkuanlee/tendermint/issues/5670
 unconditional-peer-ids = "{{ .P2P.UnconditionalPeerIDs }}"
 
 # Maximum pause when redialing a persistent peer (if zero, exponential backoff is used)
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 persistent-peers-max-dial-period = "{{ .P2P.PersistentPeersMaxDialPeriod }}"
 
 # Time to wait before flushing messages out on the connection
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 flush-throttle-timeout = "{{ .P2P.FlushThrottleTimeout }}"
 
 # Maximum size of a message packet payload, in bytes
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 max-packet-msg-payload-size = {{ .P2P.MaxPacketMsgPayloadSize }}
 
 # Rate at which packets can be sent, in bytes/second
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 send-rate = {{ .P2P.SendRate }}
 
 # Rate at which packets can be received, in bytes/second
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/yenkuanlee/tendermint/issues/5670
 recv-rate = {{ .P2P.RecvRate }}
 
 # Set true to enable the peer-exchange reactor
 pex = {{ .P2P.PexReactor }}
 
 # Comma separated list of peer IDs to keep private (will not be gossiped to other peers)
-# Warning: IPs will be exposed at /net_info, for more information https://github.com/tendermint/tendermint/issues/3055
+# Warning: IPs will be exposed at /net_info, for more information https://github.com/yenkuanlee/tendermint/issues/3055
 private-peer-ids = "{{ .P2P.PrivatePeerIDs }}"
 
 # Toggle to disable guard against peers connecting from the same ip.
@@ -437,7 +437,7 @@ max-tx-bytes = {{ .Mempool.MaxTxBytes }}
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/yenkuanlee/tendermint/issues/5796
 max-batch-bytes = {{ .Mempool.MaxBatchBytes }}
 
 # ttl-duration, if non-zero, defines the maximum amount of time a transaction

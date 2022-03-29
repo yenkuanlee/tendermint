@@ -7,8 +7,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/tendermint/tendermint/internal/rpc/core"
-	tmnet "github.com/tendermint/tendermint/libs/net"
+	"github.com/yenkuanlee/tendermint/internal/rpc/core"
+	tmnet "github.com/yenkuanlee/tendermint/libs/net"
 )
 
 // Config is an gRPC server configuration.

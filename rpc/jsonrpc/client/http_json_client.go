@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	rpctypes "github.com/yenkuanlee/tendermint/rpc/jsonrpc/types"
 )
 
 const (

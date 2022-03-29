@@ -9,17 +9,17 @@ import (
 	"github.com/spf13/cobra"
 	dbm "github.com/tendermint/tm-db"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmcfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/progressbar"
-	"github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/kv"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	"github.com/tendermint/tendermint/types"
+	abcitypes "github.com/yenkuanlee/tendermint/abci/types"
+	tmcfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/libs/progressbar"
+	"github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink/kv"
+	"github.com/yenkuanlee/tendermint/internal/state/indexer/sink/psql"
+	"github.com/yenkuanlee/tendermint/internal/store"
+	"github.com/yenkuanlee/tendermint/libs/os"
+	"github.com/yenkuanlee/tendermint/rpc/coretypes"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (

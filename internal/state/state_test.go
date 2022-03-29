@@ -14,14 +14,14 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/encoding"
-	sm "github.com/tendermint/tendermint/internal/state"
-	statefactory "github.com/tendermint/tendermint/internal/state/test/factory"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	"github.com/yenkuanlee/tendermint/crypto/encoding"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	statefactory "github.com/yenkuanlee/tendermint/internal/state/test/factory"
+	tmstate "github.com/yenkuanlee/tendermint/proto/tendermint/state"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // setupTestCase does setup common to all test cases.
@@ -435,7 +435,7 @@ func testProposerFreq(t *testing.T, caseNum int, valSet *types.ValidatorSet) {
 }
 
 // TestProposerPriorityDoesNotGetResetToZero assert that we preserve accum when calling updateState
-// see https://github.com/tendermint/tendermint/issues/2718
+// see https://github.com/yenkuanlee/tendermint/issues/2718
 func TestProposerPriorityDoesNotGetResetToZero(t *testing.T) {
 	tearDown, _, state := setupTestCase(t)
 	defer tearDown(t)
@@ -767,7 +767,7 @@ func TestLargeGenesisValidator(t *testing.T) {
 	// add more validators with same voting power as the 2nd
 	// let the genesis validator "unbond",
 	// see how long it takes until the effect wears off and both begin to alternate
-	// see: https://github.com/tendermint/tendermint/issues/2960
+	// see: https://github.com/yenkuanlee/tendermint/issues/2960
 	firstAddedValPubKey := ed25519.GenPrivKey().PubKey()
 	firstAddedValVotingPower := int64(10)
 	fvp, err := encoding.PubKeyToProto(firstAddedValPubKey)

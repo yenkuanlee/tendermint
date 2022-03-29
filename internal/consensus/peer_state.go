@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	cstypes "github.com/tendermint/tendermint/internal/consensus/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	cstypes "github.com/yenkuanlee/tendermint/internal/consensus/types"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/libs/bits"
+	tmjson "github.com/yenkuanlee/tendermint/libs/json"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmtime "github.com/yenkuanlee/tendermint/libs/time"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var (

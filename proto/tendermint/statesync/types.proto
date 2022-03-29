@@ -5,7 +5,7 @@ import "gogoproto/gogo.proto";
 import "tendermint/types/types.proto";
 import "tendermint/types/params.proto";
 
-option go_package = "github.com/tendermint/tendermint/proto/tendermint/statesync";
+option go_package = "github.com/yenkuanlee/tendermint/proto/tendermint/statesync";
 
 message Message {
   oneof sum {

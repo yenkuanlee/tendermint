@@ -1,7 +1,7 @@
 package mempool
 
 import (
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // TxInfo are parameters that get passed when attempting to add a tx to the

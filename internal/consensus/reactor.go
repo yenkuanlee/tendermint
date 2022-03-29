@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	cstypes "github.com/tendermint/tendermint/internal/consensus/types"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmevents "github.com/tendermint/tendermint/libs/events"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	cstypes "github.com/yenkuanlee/tendermint/internal/consensus/types"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	sm "github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/libs/bits"
+	tmevents "github.com/yenkuanlee/tendermint/libs/events"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	tmcons "github.com/yenkuanlee/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var (
@@ -28,7 +28,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/yenkuanlee/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		StateChannel: {
 			MsgType: new(tmcons.Message),
@@ -97,7 +97,7 @@ const (
 type ReactorOption func(*Reactor)
 
 // NOTE: Temporary interface for switching to block sync, we should get rid of v0.
-// See: https://github.com/tendermint/tendermint/issues/4595
+// See: https://github.com/yenkuanlee/tendermint/issues/4595
 type BlockSyncReactor interface {
 	SwitchToBlockSync(sm.State) error
 

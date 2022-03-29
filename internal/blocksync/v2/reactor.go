@@ -7,16 +7,16 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/tendermint/tendermint/internal/blocksync"
-	"github.com/tendermint/tendermint/internal/blocksync/v2/internal/behavior"
-	"github.com/tendermint/tendermint/internal/consensus"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/sync"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/internal/blocksync"
+	"github.com/yenkuanlee/tendermint/internal/blocksync/v2/internal/behavior"
+	"github.com/yenkuanlee/tendermint/internal/consensus"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/p2p"
+	"github.com/yenkuanlee/tendermint/internal/state"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/sync"
+	bcproto "github.com/yenkuanlee/tendermint/proto/tendermint/blocksync"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (
@@ -485,7 +485,7 @@ func (r *BlockchainReactor) Stop() error {
 
 // Receive implements Reactor by handling different message types.
 // XXX: do not call any methods that can block or incur heavy processing.
-// https://github.com/tendermint/tendermint/issues/2888
+// https://github.com/yenkuanlee/tendermint/issues/2888
 func (r *BlockchainReactor) Receive(chID byte, src p2p.Peer, msgBytes []byte) {
 	logger := r.logger.With("src", src.ID(), "chID", chID)
 

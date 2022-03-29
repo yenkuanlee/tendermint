@@ -3,9 +3,9 @@ package factory
 import (
 	"sort"
 
-	"github.com/tendermint/tendermint/config"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/config"
+	tmtime "github.com/yenkuanlee/tendermint/libs/time"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 func RandGenesisDoc(

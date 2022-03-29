@@ -9,15 +9,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/proxy"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/internal/libs/clist"
+	tmsync "github.com/yenkuanlee/tendermint/internal/libs/sync"
+	"github.com/yenkuanlee/tendermint/internal/mempool"
+	"github.com/yenkuanlee/tendermint/internal/proxy"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 var _ mempool.Mempool = (*TxMempool)(nil)

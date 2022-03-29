@@ -48,7 +48,7 @@ as they still may be getting received over the p2p network.
 These txs are stored in the cache by their hash, to mitigate memory concerns.
 
 Applications should implement replay protection, read [Replay
-Protection](https://github.com/tendermint/tendermint/blob/8cdaa7f515a9d366bbc9f0aff2a263a1a6392ead/docs/app-dev/app-development.md#replay-protection) for more information.
+Protection](https://github.com/yenkuanlee/tendermint/blob/8cdaa7f515a9d366bbc9f0aff2a263a1a6392ead/docs/app-dev/app-development.md#replay-protection) for more information.
 
 ## Configuration
 
