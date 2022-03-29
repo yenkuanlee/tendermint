@@ -12,13 +12,13 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmos "github.com/yenkuanlee/tendermint/libs/os"
+	"github.com/yenkuanlee/tendermint/proxy"
+	sm "github.com/yenkuanlee/tendermint/state"
+	"github.com/yenkuanlee/tendermint/store"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 const (

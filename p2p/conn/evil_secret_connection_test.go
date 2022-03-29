@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/chacha20poly1305"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/libs/protoio"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/crypto/ed25519"
+	cryptoenc "github.com/yenkuanlee/tendermint/crypto/encoding"
+	"github.com/yenkuanlee/tendermint/libs/protoio"
+	tmp2p "github.com/yenkuanlee/tendermint/proto/tendermint/p2p"
 )
 
 type buffer struct {
