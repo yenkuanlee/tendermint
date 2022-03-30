@@ -9,18 +9,18 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/yenkuanlee/tm-db"
 
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/evidence/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	sm "github.com/tendermint/tendermint/state"
-	smmocks "github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/yenkuanlee/tendermint/evidence"
+	"github.com/yenkuanlee/tendermint/evidence/mocks"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	tmversion "github.com/yenkuanlee/tendermint/proto/tendermint/version"
+	sm "github.com/yenkuanlee/tendermint/state"
+	smmocks "github.com/yenkuanlee/tendermint/state/mocks"
+	"github.com/yenkuanlee/tendermint/store"
+	"github.com/yenkuanlee/tendermint/types"
+	"github.com/yenkuanlee/tendermint/version"
 )
 
 func TestMain(m *testing.M) {

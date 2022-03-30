@@ -12,20 +12,20 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/yenkuanlee/tm-db"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	abcicli "github.com/yenkuanlee/tendermint/abci/client"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	"github.com/yenkuanlee/tendermint/evidence"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	tmsync "github.com/yenkuanlee/tendermint/libs/sync"
+	mempl "github.com/yenkuanlee/tendermint/mempool"
+	"github.com/yenkuanlee/tendermint/p2p"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	sm "github.com/yenkuanlee/tendermint/state"
+	"github.com/yenkuanlee/tendermint/store"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 //----------------------------------------------

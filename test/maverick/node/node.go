@@ -16,42 +16,42 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/cors"
 
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/yenkuanlee/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	bcv0 "github.com/tendermint/tendermint/blockchain/v0"
-	bcv1 "github.com/tendermint/tendermint/blockchain/v1"
-	bcv2 "github.com/tendermint/tendermint/blockchain/v2"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/evidence"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/light"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/pex"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpccore "github.com/tendermint/tendermint/rpc/core"
-	grpccore "github.com/tendermint/tendermint/rpc/grpc"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	blockidxkv "github.com/tendermint/tendermint/state/indexer/block/kv"
-	blockidxnull "github.com/tendermint/tendermint/state/indexer/block/null"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/state/txindex/kv"
-	"github.com/tendermint/tendermint/state/txindex/null"
-	"github.com/tendermint/tendermint/statesync"
-	"github.com/tendermint/tendermint/store"
-	cs "github.com/tendermint/tendermint/test/maverick/consensus"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	bcv0 "github.com/yenkuanlee/tendermint/blockchain/v0"
+	bcv1 "github.com/yenkuanlee/tendermint/blockchain/v1"
+	bcv2 "github.com/yenkuanlee/tendermint/blockchain/v2"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/consensus"
+	"github.com/yenkuanlee/tendermint/crypto"
+	"github.com/yenkuanlee/tendermint/evidence"
+	tmjson "github.com/yenkuanlee/tendermint/libs/json"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmpubsub "github.com/yenkuanlee/tendermint/libs/pubsub"
+	"github.com/yenkuanlee/tendermint/libs/service"
+	"github.com/yenkuanlee/tendermint/light"
+	mempl "github.com/yenkuanlee/tendermint/mempool"
+	"github.com/yenkuanlee/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/p2p/pex"
+	"github.com/yenkuanlee/tendermint/privval"
+	"github.com/yenkuanlee/tendermint/proxy"
+	rpccore "github.com/yenkuanlee/tendermint/rpc/core"
+	grpccore "github.com/yenkuanlee/tendermint/rpc/grpc"
+	rpcserver "github.com/yenkuanlee/tendermint/rpc/jsonrpc/server"
+	sm "github.com/yenkuanlee/tendermint/state"
+	"github.com/yenkuanlee/tendermint/state/indexer"
+	blockidxkv "github.com/yenkuanlee/tendermint/state/indexer/block/kv"
+	blockidxnull "github.com/yenkuanlee/tendermint/state/indexer/block/null"
+	"github.com/yenkuanlee/tendermint/state/txindex"
+	"github.com/yenkuanlee/tendermint/state/txindex/kv"
+	"github.com/yenkuanlee/tendermint/state/txindex/null"
+	"github.com/yenkuanlee/tendermint/statesync"
+	"github.com/yenkuanlee/tendermint/store"
+	cs "github.com/yenkuanlee/tendermint/test/maverick/consensus"
+	"github.com/yenkuanlee/tendermint/types"
+	tmtime "github.com/yenkuanlee/tendermint/types/time"
+	"github.com/yenkuanlee/tendermint/version"
 )
 
 //------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ func DefaultMetricsProvider(config *cfg.InstrumentationConfig) MetricsProvider {
 type Option func(*Node)
 
 // Temporary interface for switching to fast sync, we should get rid of v0 and v1 reactors.
-// See: https://github.com/tendermint/tendermint/issues/4595
+// See: https://github.com/yenkuanlee/tendermint/issues/4595
 type fastSyncReactor interface {
 	SwitchToFastSync(sm.State) error
 }
@@ -613,7 +613,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 			// blocks assuming 10s blocks ~ 28 hours.
 			// TODO (melekes): make it dynamic based on the actual block latencies
 			// from the live network.
-			// https://github.com/tendermint/tendermint/issues/3523
+			// https://github.com/yenkuanlee/tendermint/issues/3523
 			SeedDisconnectWaitPeriod:     28 * time.Hour,
 			PersistentPeersMaxDialPeriod: config.P2P.PersistentPeersMaxDialPeriod,
 		})
@@ -808,7 +808,7 @@ func NewNode(config *cfg.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> fast sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/tendermint/tendermint/issues/4644
+	// https://github.com/yenkuanlee/tendermint/issues/4644
 	stateSyncReactor := statesync.NewReactor(
 		*config.StateSync,
 		proxyApp.Snapshot(),
@@ -1084,7 +1084,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/yenkuanlee/tendermint/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}
@@ -1163,7 +1163,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 		config.MaxOpenConnections = n.config.RPC.GRPCMaxOpenConnections
 		// If necessary adjust global WriteTimeout to ensure it's greater than
 		// TimeoutBroadcastTxCommit.
-		// See https://github.com/tendermint/tendermint/issues/3435
+		// See https://github.com/yenkuanlee/tendermint/issues/3435
 		if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 			config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 		}

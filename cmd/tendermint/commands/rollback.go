@@ -5,11 +5,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/yenkuanlee/tm-db"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	"github.com/yenkuanlee/tendermint/state"
+	"github.com/yenkuanlee/tendermint/store"
 )
 
 var RollbackStateCmd = &cobra.Command{
