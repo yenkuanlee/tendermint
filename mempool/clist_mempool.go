@@ -8,17 +8,17 @@ import (
 	"sync"
 	"sync/atomic"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	auto "github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/clist"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/yenkuanlee/tendermint/abci/types"
+	cfg "github.com/yenkuanlee/tendermint/config"
+	auto "github.com/yenkuanlee/tendermint/libs/autofile"
+	"github.com/yenkuanlee/tendermint/libs/clist"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmmath "github.com/yenkuanlee/tendermint/libs/math"
+	tmos "github.com/yenkuanlee/tendermint/libs/os"
+	tmsync "github.com/yenkuanlee/tendermint/libs/sync"
+	"github.com/yenkuanlee/tendermint/p2p"
+	"github.com/yenkuanlee/tendermint/proxy"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 // TxKeySize is the size of the transaction key index
@@ -602,7 +602,7 @@ func (mem *CListMempool) Update(
 		//   101 -> 102
 		// Mempool after:
 		//   100
-		// https://github.com/tendermint/tendermint/issues/3322.
+		// https://github.com/yenkuanlee/tendermint/issues/3322.
 		if e, ok := mem.txsMap.Load(TxKey(tx)); ok {
 			mem.removeTx(tx, e.(*clist.CElement), false)
 		}

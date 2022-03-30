@@ -1,7 +1,7 @@
 package evidence
 
 import (
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 //go:generate mockery --case underscore --name BlockStore

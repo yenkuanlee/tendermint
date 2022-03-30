@@ -10,15 +10,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/abci/example/counter"
-	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	p2pmock "github.com/tendermint/tendermint/p2p/mock"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/yenkuanlee/tendermint/abci/example/counter"
+	cstypes "github.com/yenkuanlee/tendermint/consensus/types"
+	"github.com/yenkuanlee/tendermint/crypto/tmhash"
+	"github.com/yenkuanlee/tendermint/libs/log"
+	tmpubsub "github.com/yenkuanlee/tendermint/libs/pubsub"
+	tmrand "github.com/yenkuanlee/tendermint/libs/rand"
+	p2pmock "github.com/yenkuanlee/tendermint/p2p/mock"
+	tmproto "github.com/yenkuanlee/tendermint/proto/tendermint/types"
+	"github.com/yenkuanlee/tendermint/types"
 )
 
 /*
